@@ -33,23 +33,13 @@
     />
 
     <script>
-      // Deep links on GitHub Pages arrive via 404.html with the wanted route in
-      // ?redirect= and the original query in ?q=. Put both back in the address
-      // bar before the router boots.
+      // Deep links on GitHub Pages arrive via 404.html with the whole route,
+      // query included, in a single encoded ?redirect= parameter.
       (function () {
-        var p = new URLSearchParams(window.location.search)
-        var route = p.get('redirect')
+        var route = new URLSearchParams(window.location.search).get('redirect')
         if (route === null) return
-        var un = function (s) {
-          return s.replace(/~and~/g, '&').replace(/~tilde~/g, '~')
-        }
-        var q = p.get('q')
         var base = window.location.pathname.replace(/\/$/, '')
-        history.replaceState(
-          null,
-          '',
-          base + un(route) + (q ? '?' + un(q) : '') + window.location.hash,
-        )
+        history.replaceState(null, '', base + route + window.location.hash)
       })()
     </script>
 
