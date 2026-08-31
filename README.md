@@ -8,8 +8,9 @@ sipariş alınır.
 
 - Landing’de markanın **gerçek logosu 3 boyutlu** olarak canlanıyor: amblem açılıyor,
   ardından “KAF tarım” yazısı amblemin içinden sağa doğru harf harf çıkıyor.
-- Aynı 3B marka sitenin dört yerinde daha, farklı hareketlerle görünüyor:
-  ana sayfada kurumsal bloğunda **kaydırmaya bağlı dönen** amblem, Kurumsal
+- Aynı 3B marka sitenin beş yerinde daha, farklı hareketlerle görünüyor:
+  “Ne yapıyoruz” bölümünde **sağdan girip kaydırdıkça alçalan ve dönen** arka
+  plan amblemi, kurumsal bloğunda **kaydırmaya bağlı dönen** amblem, Kurumsal
   başlığında ve İletişim sayfasında **yavaşça salınan** amblem, 404 sayfasında da
   aynısı. Her biri ekrana yaklaşınca kuruluyor, uzaktayken WebGL bağlamı açmıyor.
 - Türkçe / İngilizce tam çeviri. İlk açılışta sistem diline göre seçilir.

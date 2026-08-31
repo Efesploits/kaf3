@@ -10,6 +10,24 @@ interface Props {
   spin?: boolean
   /** drive the intro and the rotation from this element's scroll progress */
   scrollDriven?: boolean
+  /** how far the mark turns across a full scroll pass, in radians */
+  spinRange?: number
+  /**
+   * With `scrollDriven`, travel horizontally as the section arrives: from
+   * `slideFrom` to `slideTo`, both as a percentage of the mark's own width.
+   * Leave both at 0 to stay put.
+   */
+  slideFrom?: number
+  slideTo?: number
+  /**
+   * Vertical parallax across the same pass, as a percentage of the mark's own
+   * height. Unlike the horizontal travel this stays linear, so the mark keeps
+   * sinking for as long as the section is on screen.
+   */
+  driftFrom?: number
+  driftTo?: number
+  /** purely decorative: render nothing at all rather than a flat fallback */
+  decorative?: boolean
   /** show the "replay" affordance (hero only) */
   replayable?: boolean
   className?: string
@@ -27,10 +45,17 @@ export default function Logo3D({
   mode = 'lockup',
   spin = false,
   scrollDriven = false,
+  spinRange,
+  slideFrom = 0,
+  slideTo = 0,
+  driftFrom = 0,
+  driftTo = 0,
+  decorative = false,
   replayable = false,
   className = '',
   fallbackHeight = 160,
 }: Props) {
+  const root = useRef<HTMLDivElement>(null)
   const host = useRef<HTMLDivElement>(null)
   const scene = useRef<LogoScene | null>(null)
   const [state, setState] = useState<'idle' | 'ready' | 'fallback'>('idle')
@@ -61,8 +86,23 @@ export default function Logo3D({
           mode,
           spin,
           scrollDriven,
+          spinRange,
           quality: lean ? 'low' : 'high',
           onContextLost: () => setState('fallback'),
+          // Written straight to the node: this fires every frame and a state
+          // update here would re-render the tree sixty times a second.
+          onScrollProgress:
+            slideFrom !== slideTo || driftFrom !== driftTo
+              ? (p) => {
+                  const e = p * p * (3 - 2 * p) // smoothstep, for the entrance
+                  const x = slideFrom + (slideTo - slideFrom) * e
+                  const y = driftFrom + (driftTo - driftFrom) * p
+                  const el = root.current
+                  if (el) {
+                    el.style.transform = `translate3d(${x.toFixed(2)}%, ${y.toFixed(2)}%, 0)`
+                  }
+                }
+              : undefined,
         })
         scene.current = instance
         if (import.meta.env.DEV) {
@@ -100,13 +140,14 @@ export default function Logo3D({
         w.__kafLogos = (w.__kafLogos ?? []).filter((s) => s !== instance)
       }
     }
-  }, [mode, spin, scrollDriven, replayable])
+  }, [mode, spin, scrollDriven, spinRange, slideFrom, slideTo, driftFrom, driftTo, decorative, replayable])
 
   useEffect(() => {
     scene.current?.setTheme(theme === 'dark')
   }, [theme, state])
 
   if (state === 'fallback') {
+    if (decorative) return null
     return (
       <div className={`grid place-items-center ${className}`}>
         <Logo
@@ -119,7 +160,18 @@ export default function Logo3D({
   }
 
   return (
-    <div className={`relative ${className}`}>
+    <div
+      ref={root}
+      className={`relative ${className}`}
+      style={
+        slideFrom !== slideTo || driftFrom !== driftTo
+          ? {
+              transform: `translate3d(${slideFrom}%, ${driftFrom}%, 0)`,
+              willChange: 'transform',
+            }
+          : undefined
+      }
+    >
       <div ref={host} className="h-full w-full" aria-hidden="true" />
       {/* the mark is decorative in the canvas; give assistive tech the words */}
       <span className="sr-only">Kaf Tarım</span>

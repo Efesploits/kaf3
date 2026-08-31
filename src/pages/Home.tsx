@@ -161,8 +161,28 @@ function CropStrip() {
 function WhatWeDo() {
   const { t } = useI18n()
   return (
-    <section className="shell py-24 md:py-32">
-      <div className="grid gap-10 lg:grid-cols-12">
+    <section className="relative isolate overflow-hidden py-24 md:py-32">
+      {/* The mark rides in from the right edge as the section arrives and keeps
+          turning while the reader scrolls through it. Decorative only. */}
+      <div
+        aria-hidden="true"
+        className="mark-watermark pointer-events-none absolute inset-y-0 right-0 -z-10 hidden items-center lg:flex"
+        style={{ width: 'min(48vw, 620px)' }}
+      >
+        <Logo3D
+          mode="emblem"
+          scrollDriven
+          spinRange={1.7}
+          slideFrom={95}
+          slideTo={38}
+          driftFrom={-15}
+          driftTo={15}
+          decorative
+          className="h-[min(48vw,620px)] w-full"
+        />
+      </div>
+
+      <div className="shell grid gap-10 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <Reveal as="p" className="eyebrow">
             {t.what.eyebrow}

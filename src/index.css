@@ -287,6 +287,21 @@
   .tabular {
     font-variant-numeric: tabular-nums;
   }
+
+  /* A section watermark: solid in the page gutter, faded away before it
+     reaches the text column. The stops are measured from the viewport's right
+     edge (the element is anchored there), so the gutter width decides them and
+     the mark never sits behind a line of copy at full strength. */
+  .mark-watermark {
+    --wm-solid: calc((100vw - min(84rem, 100vw)) / 2 + 3rem);
+    --wm-fade: calc(var(--wm-solid) + 15rem);
+    opacity: 0.5;
+    -webkit-mask-image: linear-gradient(to left, #000 var(--wm-solid), transparent var(--wm-fade));
+    mask-image: linear-gradient(to left, #000 var(--wm-solid), transparent var(--wm-fade));
+  }
+  [data-theme='dark'] .mark-watermark {
+    opacity: 0.45;
+  }
 }
 
 @layer utilities {

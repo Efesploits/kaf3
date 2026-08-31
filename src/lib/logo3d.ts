@@ -207,8 +207,12 @@ export interface LogoSceneOptions {
   spin?: boolean
   /** drive the intro and the rotation from the element's scroll progress */
   scrollDriven?: boolean
+  /** how far the mark turns across a full scroll pass, in radians */
+  spinRange?: number
   onReady?: () => void
   onProgress?: (t: number) => void
+  /** 0..1 travel of the host element through the viewport, once per frame */
+  onScrollProgress?: (p: number) => void
   /** the GPU dropped the context; the host should show the flat mark instead */
   onContextLost?: () => void
 }
@@ -306,7 +310,8 @@ export class LogoScene {
     this.last = performance.now()
     if (opts.scrollDriven && !this.reduced) {
       const p = this.scrollProgress()
-      this.spinAngle = (p - 0.5) * 1.15
+      this.spinAngle = (p - 0.5) * (opts.spinRange ?? 1.15)
+      this.opts.onScrollProgress?.(p)
       this.applyFrame(this.duration * clamp01(p / 0.55))
     } else {
       this.applyFrame(this.time)
@@ -619,7 +624,8 @@ export class LogoScene {
       this.rect = null
       const p = this.scrollProgress()
       t = this.duration * clamp01(p / 0.55)
-      this.spinAngle = (p - 0.5) * 1.15
+      this.spinAngle = (p - 0.5) * (this.opts.spinRange ?? 1.15)
+      this.opts.onScrollProgress?.(p)
     } else {
       t = this.time
       if (this.opts.spin) {
