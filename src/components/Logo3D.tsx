@@ -13,6 +13,14 @@ interface Props {
   /** how far the mark turns across a full scroll pass, in radians */
   spinRange?: number
   /**
+   * CSS selector for the ancestor whose travel through the viewport drives the
+   * motion. Without it the canvas measures itself, which starts late when the
+   * mark sits centred inside a tall section.
+   */
+  trackSelector?: string
+  /** fraction of the pass by which the entrance is finished (default 0.55) */
+  entryEnd?: number
+  /**
    * With `scrollDriven`, travel horizontally as the section arrives: from
    * `slideFrom` to `slideTo`, both as a percentage of the mark's own width.
    * Leave both at 0 to stay put.
@@ -46,6 +54,8 @@ export default function Logo3D({
   spin = false,
   scrollDriven = false,
   spinRange,
+  trackSelector,
+  entryEnd,
   slideFrom = 0,
   slideTo = 0,
   driftFrom = 0,
@@ -87,6 +97,10 @@ export default function Logo3D({
           spin,
           scrollDriven,
           spinRange,
+          entryEnd,
+          track: trackSelector
+            ? host.current.closest<HTMLElement>(trackSelector)
+            : undefined,
           quality: lean ? 'low' : 'high',
           onContextLost: () => setState('fallback'),
           // Written straight to the node: this fires every frame and a state
@@ -94,7 +108,10 @@ export default function Logo3D({
           onScrollProgress:
             slideFrom !== slideTo || driftFrom !== driftTo
               ? (p) => {
-                  const e = p * p * (3 - 2 * p) // smoothstep, for the entrance
+                  // The entrance is over well before the section is, so the
+                  // travel is compressed into the same window the intro uses.
+                  const q = Math.min(1, p / (entryEnd ?? 0.55))
+                  const e = q * q * (3 - 2 * q) // smoothstep
                   const x = slideFrom + (slideTo - slideFrom) * e
                   const y = driftFrom + (driftTo - driftFrom) * p
                   const el = root.current
@@ -140,7 +157,10 @@ export default function Logo3D({
         w.__kafLogos = (w.__kafLogos ?? []).filter((s) => s !== instance)
       }
     }
-  }, [mode, spin, scrollDriven, spinRange, slideFrom, slideTo, driftFrom, driftTo, decorative, replayable])
+  }, [
+    mode, spin, scrollDriven, spinRange, trackSelector, entryEnd,
+    slideFrom, slideTo, driftFrom, driftTo, decorative, replayable,
+  ])
 
   useEffect(() => {
     scene.current?.setTheme(theme === 'dark')

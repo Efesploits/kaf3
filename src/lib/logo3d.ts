@@ -209,6 +209,17 @@ export interface LogoSceneOptions {
   scrollDriven?: boolean
   /** how far the mark turns across a full scroll pass, in radians */
   spinRange?: number
+  /**
+   * Measure scroll progress from this element instead of the canvas itself.
+   * A background mark is usually centred inside a much taller section, so its
+   * own box enters the viewport long after the section does.
+   */
+  track?: HTMLElement | null
+  /**
+   * Fraction of the pass by which the entrance is finished. Lower means the
+   * mark is in place sooner. Default 0.55.
+   */
+  entryEnd?: number
   onReady?: () => void
   onProgress?: (t: number) => void
   /** 0..1 travel of the host element through the viewport, once per frame */
@@ -312,7 +323,7 @@ export class LogoScene {
       const p = this.scrollProgress()
       this.spinAngle = (p - 0.5) * (opts.spinRange ?? 1.15)
       this.opts.onScrollProgress?.(p)
-      this.applyFrame(this.duration * clamp01(p / 0.55))
+      this.applyFrame(this.duration * clamp01(p / ((opts.entryEnd ?? 0.55) * 0.8)))
     } else {
       this.applyFrame(this.time)
     }
@@ -584,7 +595,8 @@ export class LogoScene {
    * appears from below to 1 once it has left the top.
    */
   private scrollProgress(): number {
-    const r = this.rect ?? (this.rect = this.container.getBoundingClientRect())
+    const el = this.opts.track ?? this.container
+    const r = this.rect ?? (this.rect = el.getBoundingClientRect())
     const vh = window.innerHeight || 1
     return clamp01((vh - r.top) / (vh + r.height))
   }
@@ -623,7 +635,7 @@ export class LogoScene {
       // assembles on the way in and keeps turning as the reader scrolls past.
       this.rect = null
       const p = this.scrollProgress()
-      t = this.duration * clamp01(p / 0.55)
+      t = this.duration * clamp01(p / ((this.opts.entryEnd ?? 0.55) * 0.8))
       this.spinAngle = (p - 0.5) * (this.opts.spinRange ?? 1.15)
       this.opts.onScrollProgress?.(p)
     } else {

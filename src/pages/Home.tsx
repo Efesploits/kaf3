@@ -167,18 +167,20 @@ function WhatWeDo() {
       <div
         aria-hidden="true"
         className="mark-watermark pointer-events-none absolute inset-y-0 right-0 -z-10 hidden items-center lg:flex"
-        style={{ width: 'min(48vw, 620px)' }}
+        style={{ width: 'min(38vw, 480px)' }}
       >
         <Logo3D
           mode="emblem"
           scrollDriven
+          trackSelector="section"
+          entryEnd={0.3}
           spinRange={1.7}
-          slideFrom={95}
-          slideTo={38}
-          driftFrom={-15}
-          driftTo={15}
+          slideFrom={72}
+          slideTo={26}
+          driftFrom={-34}
+          driftTo={34}
           decorative
-          className="h-[min(48vw,620px)] w-full"
+          className="h-[min(38vw,480px)] w-full"
         />
       </div>
 
