@@ -9,6 +9,7 @@ import About from './pages/About'
 import Products from './pages/Products'
 import ProductDetail from './pages/ProductDetail'
 import Contact from './pages/Contact'
+import Logo3D from './components/Logo3D'
 
 /**
  * Route changes should land at the top (but not when only the query changed),
@@ -44,7 +45,8 @@ function NotFound() {
   return (
     <section className="shell grid min-h-[70svh] place-items-center py-32 text-center">
       <div>
-        <p className="font-display text-[clamp(4rem,16vw,10rem)] font-extrabold leading-none tracking-tighter" style={{ color: 'var(--line)' }}>
+        <Logo3D mode="emblem" spin fallbackHeight={120} className="mx-auto h-[150px] w-[150px]" />
+        <p className="mt-6 font-display text-[clamp(4rem,16vw,10rem)] font-extrabold leading-none tracking-tighter" style={{ color: 'var(--line)' }}>
           404
         </p>
         <h1 className="mt-4 font-display text-[clamp(1.6rem,4vw,2.4rem)] font-bold tracking-tight">

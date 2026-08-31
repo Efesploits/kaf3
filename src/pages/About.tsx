@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useI18n } from '../i18n'
 import { company, milestones } from '../data/company'
 import { currentRange, products } from '../data/products'
-import Logo from '../components/Logo'
+import Logo3D from '../components/Logo3D'
 import Reveal from '../components/Reveal'
 
 /** dd.mm.yyyy from the registry, rendered the way each locale writes dates */
@@ -47,11 +47,24 @@ export default function About() {
             </Reveal>
           </div>
           <Reveal delay={160} className="lg:col-span-5">
-            <div className="rounded-2xl border p-7" style={{ background: 'var(--bg-soft)' }}>
-              <Logo variant="full" height={54} className="max-w-full" />
-              <p className="mt-5 text-[0.9rem] leading-relaxed" style={{ color: 'var(--fg-muted)' }}>
-                {company.legalNameFull}
-              </p>
+            <div
+              className="flex items-center gap-6 rounded-2xl border p-6 sm:gap-8 sm:p-7"
+              style={{ background: 'var(--bg-soft)' }}
+            >
+              <Logo3D
+                mode="emblem"
+                spin
+                fallbackHeight={112}
+                className="h-[112px] w-[112px] shrink-0 sm:h-[136px] sm:w-[136px]"
+              />
+              <div>
+                <p className="font-display text-[1.05rem] font-bold leading-snug tracking-tight">
+                  {company.brand}
+                </p>
+                <p className="mt-2 text-[0.86rem] leading-relaxed" style={{ color: 'var(--fg-muted)' }}>
+                  {company.legalNameFull}
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

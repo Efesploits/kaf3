@@ -192,9 +192,21 @@ interface Piece {
   material: THREE.MeshPhysicalMaterial
 }
 
+/**
+ * `lockup` is the full mark with the wordmark reveal - the hero.
+ * `emblem` builds only the roundel, for the smaller moments elsewhere on the
+ * site where a whole logo would shout.
+ */
+export type LogoMode = 'lockup' | 'emblem'
+
 export interface LogoSceneOptions {
   container: HTMLElement
+  mode?: LogoMode
   quality?: 'high' | 'low'
+  /** keep turning slowly once the intro has settled */
+  spin?: boolean
+  /** drive the intro and the rotation from the element's scroll progress */
+  scrollDriven?: boolean
   onReady?: () => void
   onProgress?: (t: number) => void
   /** the GPU dropped the context; the host should show the flat mark instead */
@@ -231,6 +243,12 @@ export class LogoScene {
   private visible = true
   private io?: IntersectionObserver
   private opts: LogoSceneOptions
+  private mode: LogoMode
+  /** length of this instance's intro, in seconds */
+  private duration: number
+  private spinAngle = 0
+  private fitW = 4.0
+  private fitH = 1.35
 
   /** seconds; keep in sync with the caption timings in the hero */
   static readonly DURATION = 4.2
@@ -238,6 +256,8 @@ export class LogoScene {
   constructor(opts: LogoSceneOptions) {
     this.opts = opts
     this.container = opts.container
+    this.mode = opts.mode ?? 'lockup'
+    this.duration = this.mode === 'emblem' ? 1.9 : LogoScene.DURATION
     this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
     const quality = opts.quality ?? 'high'
@@ -282,9 +302,15 @@ export class LogoScene {
     window.addEventListener('scroll', this.invalidateRect, { passive: true })
     this.renderer.domElement.addEventListener('webglcontextlost', this.onContextLost)
 
-    if (this.reduced) this.time = LogoScene.DURATION
+    if (this.reduced) this.time = this.duration
     this.last = performance.now()
-    this.applyFrame(this.time)
+    if (opts.scrollDriven && !this.reduced) {
+      const p = this.scrollProgress()
+      this.spinAngle = (p - 0.5) * 1.15
+      this.applyFrame(this.duration * clamp01(p / 0.55))
+    } else {
+      this.applyFrame(this.time)
+    }
     this.renderer.render(this.scene, this.camera)
     this.raf = requestAnimationFrame(this.tick)
     opts.onReady?.()
@@ -342,6 +368,7 @@ export class LogoScene {
     const W = vb[2] * S
 
     const tmp = new THREE.Vector3()
+    const bounds = new THREE.Box2()
 
     interface Raw {
       id: string
@@ -355,6 +382,7 @@ export class LogoScene {
       const node = p.userData?.node as SVGElement | undefined
       const id = node?.id ?? ''
       if (!SPEC[id]) continue
+      if (this.mode === 'emblem' && !EMBLEM.includes(id)) continue
       const rawFill = node?.getAttribute('fill') ?? ''
       const m = /url\(#([^)]+)\)/.exec(rawFill)
       raws.push({
@@ -446,6 +474,9 @@ export class LogoScene {
         geo.translate(-tmp.x, -tmp.y, -tmp.z)
         const rest = new THREE.Vector3(tmp.x, tmp.y, tmp.z + spec.lift)
 
+        bounds.expandByPoint(new THREE.Vector2(bb.min.x + rest.x, bb.min.y + rest.y))
+        bounds.expandByPoint(new THREE.Vector2(bb.max.x + rest.x, bb.max.y + rest.y))
+
         const pivot = new THREE.Group()
         pivot.position.copy(rest)
         mesh.position.set(0, 0, 0)
@@ -466,12 +497,19 @@ export class LogoScene {
       })
     }
 
-    // Centre the whole mark on the origin.
-    this.root.position.set(-W / 2, 0.5, 0)
+    // Centre whatever was built on the origin, and remember how much room the
+    // camera has to leave for it.
+    const cx = (bounds.min.x + bounds.max.x) / 2
+    const cy = (bounds.min.y + bounds.max.y) / 2
+    this.root.position.set(-cx, -cy, 0)
+    this.fitW = (bounds.max.x - bounds.min.x) * 1.1
+    this.fitH = (bounds.max.y - bounds.min.y) * (this.mode === 'emblem' ? 1.12 : 1.32)
 
     // Stagger: emblem parts in draw order, glyphs left to right.
     const emblemPieces = this.pieces.filter((p) => p.group === 'emblem')
     emblemPieces.forEach((p, i) => (p.delay = i * 0.085))
+
+    if (this.mode === 'emblem') return
 
     const wordPieces = this.pieces
       .filter((p) => p.group === 'word')
@@ -524,14 +562,26 @@ export class LogoScene {
       }
     }
 
-    // The wordmark is revealed by a plane sweeping out of the emblem to the
-    // right - the "içten sağa doğru" reveal.
-    this.clip.constant = mix(this.clipFrom, this.clipTo, outQuint(seg(t, 1.02, 1.5)))
+    if (this.mode === 'lockup') {
+      // The wordmark is revealed by a plane sweeping out of the emblem to the
+      // right - the "içten sağa doğru" reveal.
+      this.clip.constant = mix(this.clipFrom, this.clipTo, outQuint(seg(t, 1.02, 1.5)))
+    }
 
-    // The whole mark settles from a three-quarter view to face-on.
-    const settle = outQuint(seg(t, 0.05, 2.5))
-    this.root.rotation.y = mix(-0.62, 0, settle)
-    this.root.rotation.x = mix(0.24, 0, settle)
+    // The mark settles from a three-quarter view to face-on.
+    const settle = outQuint(seg(t, 0.05, this.mode === 'emblem' ? 1.5 : 2.5))
+    this.root.rotation.y = mix(this.mode === 'emblem' ? -1.1 : -0.62, 0, settle) + this.spinAngle
+    this.root.rotation.x = mix(this.mode === 'emblem' ? 0.35 : 0.24, 0, settle)
+  }
+
+  /**
+   * Progress of the host element through the viewport, 0 just before it
+   * appears from below to 1 once it has left the top.
+   */
+  private scrollProgress(): number {
+    const r = this.rect ?? (this.rect = this.container.getBoundingClientRect())
+    const vh = window.innerHeight || 1
+    return clamp01((vh - r.top) / (vh + r.height))
   }
 
   private rect: DOMRect | null = null
@@ -561,13 +611,31 @@ export class LogoScene {
     if (!this.visible) return
 
     this.time += dt
-    const t = this.reduced ? LogoScene.DURATION : this.time
+
+    let t: number
+    if (this.opts.scrollDriven) {
+      // The element's own travel through the viewport is the timeline: the mark
+      // assembles on the way in and keeps turning as the reader scrolls past.
+      this.rect = null
+      const p = this.scrollProgress()
+      t = this.duration * clamp01(p / 0.55)
+      this.spinAngle = (p - 0.5) * 1.15
+    } else {
+      t = this.time
+      if (this.opts.spin) {
+        // A gentle sway, not a full turn: past 90 degrees the mark would read
+        // mirrored, which is not something a logo should ever do.
+        const after = Math.max(0, this.time - this.duration * 0.7)
+        this.spinAngle = Math.sin(after * 0.42) * 0.42
+      }
+    }
+
     this.applyFrame(t)
-    this.opts.onProgress?.(clamp01(t / LogoScene.DURATION))
+    this.opts.onProgress?.(clamp01(t / this.duration))
 
     // idle life: pointer parallax plus a slow breathing drift
     this.pointer.lerp(this.pointerTarget, 1 - Math.pow(0.001, dt))
-    const settled = clamp01((t - 2.0) / 1.2)
+    const settled = clamp01((t - this.duration * 0.55) / 1.2)
     const idle = this.reduced ? 0 : settled
     this.tilt.rotation.y = (this.pointer.x * 0.15 + Math.sin(t * 0.34) * 0.05) * idle
     this.tilt.rotation.x = (this.pointer.y * 0.09 + Math.cos(t * 0.28) * 0.028) * idle
@@ -608,10 +676,6 @@ export class LogoScene {
     this.renderer.render(this.scene, this.camera)
   }
 
-  /** logical size of the mark plus the room its 3D rotation needs */
-  private static readonly FIT_W = 4.0
-  private static readonly FIT_H = 1.35
-
   private invalidateRect = () => {
     this.rect = null
   }
@@ -633,13 +697,13 @@ export class LogoScene {
     // Dolly so the mark fills a fixed fraction of whichever axis binds first.
     const fill = aspect < 2 ? 0.96 : 0.9
     const tan = Math.tan((this.camera.fov / 2) * THREE.MathUtils.DEG2RAD)
-    const byW = LogoScene.FIT_W / 2 / (fill * tan * aspect)
-    const byH = LogoScene.FIT_H / 2 / (fill * tan)
+    const byW = this.fitW / 2 / (fill * tan * aspect)
+    const byH = this.fitH / 2 / (fill * tan)
     this.camera.position.z = THREE.MathUtils.clamp(Math.max(byW, byH), 2.6, 24)
     this.camera.updateProjectionMatrix()
     // With reduced motion the render loop is idle, so redraw on resize.
     if (this.reduced && this.pieces.length) {
-      this.applyFrame(LogoScene.DURATION)
+      this.applyFrame(this.duration)
       this.renderer.render(this.scene, this.camera)
     }
   }

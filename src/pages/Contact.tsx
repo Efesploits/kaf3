@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { useI18n } from '../i18n'
 import { company } from '../data/company'
+import Logo3D from '../components/Logo3D'
 import Reveal from '../components/Reveal'
 
 const field =
@@ -46,25 +47,36 @@ export default function Contact() {
 
   return (
     <>
-      <section className="shell pb-14 pt-[calc(68px+4rem)] md:pt-[calc(76px+6rem)]">
-        <Reveal as="p" className="eyebrow">
-          {t.contact.eyebrow}
-        </Reveal>
-        <Reveal as="h1" delay={60} className="mt-5 font-display text-[clamp(2.2rem,6vw,4.2rem)] font-extrabold leading-[1.02] tracking-[-0.03em]">
-          {t.contact.title}
-        </Reveal>
-        <Reveal as="p" delay={110} className="mt-5 max-w-xl leading-relaxed" style={{ color: 'var(--fg-muted)' }}>
-          {t.contact.lead}
-        </Reveal>
+      <section className="shell grid gap-10 pb-14 pt-[calc(68px+4rem)] md:pt-[calc(76px+6rem)] lg:grid-cols-12 lg:items-center">
+        <div className="lg:col-span-7">
+          <Reveal as="p" className="eyebrow">
+            {t.contact.eyebrow}
+          </Reveal>
+          <Reveal as="h1" delay={60} className="mt-5 font-display text-[clamp(2.2rem,6vw,4.2rem)] font-extrabold leading-[1.02] tracking-[-0.03em]">
+            {t.contact.title}
+          </Reveal>
+          <Reveal as="p" delay={110} className="mt-5 max-w-xl leading-relaxed" style={{ color: 'var(--fg-muted)' }}>
+            {t.contact.lead}
+          </Reveal>
 
-        <Reveal delay={160} className="mt-9 flex flex-wrap gap-3">
-          <a href={`tel:${company.phoneHref}`} className="btn tabular">
-            {company.phone}
-          </a>
-          <a href={`mailto:${company.email}`} className="btn btn-ghost">
-            {t.contact.mail}
-          </a>
-        </Reveal>
+          <Reveal delay={160} className="mt-9 flex flex-wrap gap-3">
+            <a href={`tel:${company.phoneHref}`} className="btn tabular">
+              {company.phone}
+            </a>
+            <a href={`mailto:${company.email}`} className="btn btn-ghost">
+              {t.contact.mail}
+            </a>
+          </Reveal>
+        </div>
+
+        <div className="order-first lg:order-none lg:col-span-5">
+          <Logo3D
+            mode="emblem"
+            spin
+            fallbackHeight={180}
+            className="h-[190px] w-full sm:h-[240px] lg:h-[290px]"
+          />
+        </div>
       </section>
 
       <section className="shell grid gap-6 pb-6 md:grid-cols-2">

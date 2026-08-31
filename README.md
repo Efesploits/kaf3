@@ -8,6 +8,10 @@ sipariş alınır.
 
 - Landing’de markanın **gerçek logosu 3 boyutlu** olarak canlanıyor: amblem açılıyor,
   ardından “KAF tarım” yazısı amblemin içinden sağa doğru harf harf çıkıyor.
+- Aynı 3B marka sitenin dört yerinde daha, farklı hareketlerle görünüyor:
+  ana sayfada kurumsal bloğunda **kaydırmaya bağlı dönen** amblem, Kurumsal
+  başlığında ve İletişim sayfasında **yavaşça salınan** amblem, 404 sayfasında da
+  aynısı. Her biri ekrana yaklaşınca kuruluyor, uzaktayken WebGL bağlamı açmıyor.
 - Türkçe / İngilizce tam çeviri. İlk açılışta sistem diline göre seçilir.
 - Aydınlık / karanlık tema. İlk açılışta işletim sistemi tercihine göre seçilir.
 - 42 ürün: 13’ü hâlihazırda satışta olan Promark serisi (ürün fotoğraflarıyla),
@@ -36,6 +40,7 @@ seçili olmalıdır.
 ```
 src/
   lib/logo3d.ts        3B logo sahnesi (three.js) — geometri, malzeme, koreografi
+  components/Logo3D    sahneyi tembel kuran React sarmalayıcısı (mod/spin/scroll)
   assets/kaf-logo.svg  logonun vektör kaynağı (aşağıya bakınız)
   data/
     company.ts         doğrulanmış kurumsal bilgiler
@@ -56,7 +61,9 @@ ta kendisi. Renkler ve gradyanlar referans logo görselinden şekil şekil
 örneklendi, hizalama maske örtüşmesi (IoU ≈ 0.94) ile optimize edildi.
 
 3B tarafta bu vektör `SVGLoader` ile şekillere, oradan `ExtrudeGeometry` ile
-hacme dönüşüyor. Gradyanlar köşe renklerine (vertex colors) pişiriliyor, böylece
+hacme dönüşüyor. Sahne iki modda çalışıyor: `lockup` tam kilitlenmiş marka
+(hero), `emblem` yalnızca yuvarlak amblem (diğer yerler) — ikincisi 18 yerine
+6 parça kuruyor, dolayısıyla çok daha hafif. Gradyanlar köşe renklerine (vertex colors) pişiriliyor, böylece
 doku (texture) olmadan da marka renkleri birebir çıkıyor. Kelime markası her
 harfi ayrı bir mesh olacak şekilde bölünüyor; iki kırpma düzlemi (biri amblemin
 sağ kenarında sabit, biri sağa doğru süpüren) harflerin amblemin içinden

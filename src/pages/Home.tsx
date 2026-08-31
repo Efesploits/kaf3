@@ -11,7 +11,7 @@ import {
   products,
   type CategoryId,
 } from '../data/products'
-import HeroLogo3D from '../components/HeroLogo3D'
+import Logo3D from '../components/Logo3D'
 import ProductCard from '../components/ProductCard'
 import Reveal from '../components/Reveal'
 
@@ -47,7 +47,7 @@ function Hero() {
       />
 
       <div className="shell flex min-h-[94svh] flex-col justify-center pb-16 pt-[68px] md:pt-[76px]">
-        <HeroLogo3D className="h-[30svh] min-h-[168px] w-full sm:h-[36svh] md:h-[44svh]" />
+        <Logo3D replayable className="h-[30svh] min-h-[168px] w-full sm:h-[36svh] md:h-[44svh]" />
 
         <div className="mt-4 grid gap-10 md:mt-8 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
@@ -374,30 +374,38 @@ function AboutTeaser() {
   const { t, lang } = useI18n()
   return (
     <section className="shell py-24 md:py-32">
-      <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
-        <div className="lg:col-span-6">
+      <div className="grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-16">
+        {/* the roundel turns with the page as this block scrolls past */}
+        <div className="lg:col-span-5">
+          <Logo3D
+            mode="emblem"
+            scrollDriven
+            fallbackHeight={220}
+            className="h-[240px] w-full sm:h-[300px] lg:h-[380px]"
+          />
+        </div>
+
+        <div className="lg:col-span-7">
           <Reveal as="p" className="eyebrow">
             {t.aboutTeaser.eyebrow}
           </Reveal>
           <Reveal as="h2" delay={70} className="mt-5 font-display text-[clamp(1.8rem,3.8vw,2.9rem)] font-bold leading-[1.08] tracking-[-0.025em]">
             {t.aboutTeaser.title}
           </Reveal>
-          <Reveal delay={130} className="mt-8">
-            <Link to="/kurumsal" className="btn">
-              {t.aboutTeaser.cta} <Arrow />
-            </Link>
-          </Reveal>
-        </div>
-        <div className="lg:col-span-6">
           {t.about.story.slice(0, 2).map((p, i) => (
-            <Reveal key={i} delay={i * 90} as="p" className="mb-4 leading-relaxed" style={{ color: 'var(--fg-muted)' }}>
+            <Reveal key={i} delay={120 + i * 90} as="p" className="mt-5 max-w-2xl leading-relaxed" style={{ color: 'var(--fg-muted)' }}>
               {p}
             </Reveal>
           ))}
-          <Reveal delay={200} className="mt-8 border-l-2 pl-5" style={{ borderColor: 'var(--accent)' }}>
+          <Reveal delay={280} className="mt-8 border-l-2 pl-5" style={{ borderColor: 'var(--accent)' }}>
             <p className="font-display text-[1.15rem] font-semibold italic tracking-tight">
               “{company.motto[lang]}”
             </p>
+          </Reveal>
+          <Reveal delay={330} className="mt-9">
+            <Link to="/kurumsal" className="btn">
+              {t.aboutTeaser.cta} <Arrow />
+            </Link>
           </Reveal>
         </div>
       </div>
