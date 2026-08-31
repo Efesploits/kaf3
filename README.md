@@ -81,6 +81,21 @@ kaftarim.com’un WordPress REST API’si, Facebook sayfası ve resmî kayıtlar
 ticaret sicili). Doğrulanamayan bilgiler — sertifikalar, ihracat yapılan ülkeler,
 çalışan sayısı, fuar katılımı — bilinçli olarak siteye konmadı.
 
+### Ürün görselleri
+
+22 paket görselinin tamamı üreticinin 2560 px'lik orijinal render'larından
+hazırlandı ve saydam zeminli WebP olarak `public/products/` altında duruyor.
+Üç kova görseli (FLORENTIA, POTATRO, STATERA) kaynakta düz beyaz fon ve hafif
+bir zemin gölgesiyle geliyordu. Fon şöyle kaldırıldı: `d = 255 - min(R,G,B)`
+alanında gölge en fazla 11'e çıkıyor, kovanın kendi siluetinin en açık pikseli
+ise 27; bu yüzden kenardan başlayan ve yalnızca `d <= 14` piksellerde ilerleyen
+bir taşma doldurması hem fonu hem gölgeyi yutuyor, ürüne girmeden duruyor.
+Beyaz plastiği koruyan şey bağlantısallık: gövdenin ortasındaki parlama da
+beyaz, ama kenardan erişilebilir değil. Sapın içinde kalan iki kapalı boşluk
+ayrıca tespit edilip saydamlaştırıldı. Silüetteki yumuşak geçiş
+`a = d / d_iç` ile geri kazanıldı, yani render'ın kendi kenar yumuşatması
+korundu — hiçbir piksel sertçe kesilmedi.
+
 ### Ürün metinlerinde yapılan düzenlemeler
 
 Ürün açıklamaları firmanın kendi kataloğundan ve etiketlerinden alındı. İki tür
