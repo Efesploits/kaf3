@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg" />
+    <meta name="theme-color" content="#0d1109" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+
+    <title>Kaf Tarım — Bitki Besleme ve Özel Gübre Çözümleri</title>
+    <meta
+      name="description"
+      content="Kaf Tohum Gübre Tarım İnş. San. Tic. Ltd. Şti. — Antalya merkezli, 2010’dan bu yana bitki besleme ürünleri ithal eden, 2018’den bu yana ihracat yapan KAF Şirketler Grubu’nun tarım kolu. Yaprak gübreleri, damla sulama gübreleri, biyostimülantlar."
+    />
+    <meta name="author" content="Kaf Tohum Gübre Tarım İnş. San. Tic. Ltd. Şti." />
+    <link rel="canonical" href="https://kaftarim.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kaf Tarım" />
+    <meta property="og:title" content="Kaf Tarım — Bitki Besleme ve Özel Gübre Çözümleri" />
+    <meta
+      property="og:description"
+      content="Antalya merkezli bitki besleme uzmanı. Yaprak gübreleri, damla sulama gübreleri ve biyostimülantlar."
+    />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400..800;1,400..700&family=Inter:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      // Deep links on GitHub Pages arrive via 404.html with the wanted route in
+      // ?redirect= and the original query in ?q=. Put both back in the address
+      // bar before the router boots.
+      (function () {
+        var p = new URLSearchParams(window.location.search)
+        var route = p.get('redirect')
+        if (route === null) return
+        var un = function (s) {
+          return s.replace(/~and~/g, '&').replace(/~tilde~/g, '~')
+        }
+        var q = p.get('q')
+        var base = window.location.pathname.replace(/\/$/, '')
+        history.replaceState(
+          null,
+          '',
+          base + un(route) + (q ? '?' + un(q) : '') + window.location.hash,
+        )
+      })()
+    </script>
+
+    <script>
+      // Applied before first paint so the page never flashes the wrong theme
+      // or the wrong language.
+      (function () {
+        try {
+          var t = localStorage.getItem('kaf-theme');
+          if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          document.documentElement.dataset.theme = t;
+          var l = localStorage.getItem('kaf-lang');
+          if (!l) {
+            var nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+            l = /^tr/i.test(nav) ? 'tr' : 'en';
+          }
+          document.documentElement.lang = l;
+        } catch (e) {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

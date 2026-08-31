@@ -1,0 +1,1450 @@
+[
+ {
+  "slug": "epsilon",
+  "name": "EPSILON",
+  "series": "promark",
+  "category": "organik",
+  "type": {
+   "tr": "Sıvı Deniz Yosunu"
+  },
+  "tagline": {
+   "tr": "Bitkinizi stresten kurtarmak mı istiyorsunuz?"
+  },
+  "description": {
+   "tr": "Epsilon bitkilerin çeşitli stres faktörlerine karşı daha dirençli olmalarına yardımcı olur. Kuraklık, tuzluluk, aşırı sıcaklık gibi çevresel streslere karşı bitkilerin dayanıklılığını arttırır. Yeşil aksamda klorofil miktarının artmasını sağlar. Bitkinin vitamin ve enzim sentezlemesine yardımcı olur."
+  },
+  "analysis": [
+   {
+    "tr": "Organik Madde",
+    "value": "%15"
+   },
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "value": "%4"
+   },
+   {
+    "tr": "Alginik Asit",
+    "value": "%1,5"
+   },
+   {
+    "tr": "Maksimum EC (dS/m)",
+    "value": "10"
+   },
+   {
+    "tr": "pH Aralığı",
+    "value": "5-7"
+   }
+  ],
+  "gallery": [
+   "epsilon1"
+  ]
+ },
+ {
+  "slug": "citofol",
+  "name": "CITOFOL",
+  "series": "promark",
+  "category": "organik",
+  "type": {
+   "tr": "Azotlu Sıvı Organomineral Gübre"
+  },
+  "tagline": {
+   "tr": "Hücre bölünmesinin hızlanmasını mı istiyorsunuz?"
+  },
+  "description": {
+   "tr": "İçeriğindeki organik madde, L tipi aminoasitler ve Magnezyum sayesinde hücre bölünmesinin hızlanmasını sağlar."
+  },
+  "analysis": [
+   {
+    "tr": "Organik Madde",
+    "value": "%20"
+   },
+   {
+    "tr": "Toplam Azot (N)",
+    "value": "%8"
+   },
+   {
+    "tr": "Organik Azot (N)",
+    "value": "%0,5"
+   },
+   {
+    "tr": "Nitrat Azotu (N)",
+    "value": "%3,5"
+   },
+   {
+    "tr": "Üre Azotu (N)",
+    "value": "%4"
+   },
+   {
+    "tr": "Suda Çözünür Magnezyum Oksit (MgO)",
+    "value": "%5"
+   },
+   {
+    "tr": "Serbest Aminoasitler",
+    "value": "%5"
+   },
+   {
+    "tr": "Maksimum Klor (Cl)",
+    "value": "%3"
+   },
+   {
+    "tr": "pH",
+    "value": "5-7"
+   }
+  ],
+  "gallery": [
+   "citofol1"
+  ]
+ },
+ {
+  "slug": "bix",
+  "name": "BIX",
+  "series": "promark",
+  "category": "organik",
+  "type": {
+   "tr": "Sıvı Deniz Yosunu"
+  },
+  "tagline": {
+   "tr": "Bitkinizin gelişimini hızlandırmak mı istiyorsunuz?"
+  },
+  "description": {
+   "tr": "Kök bölgesinden uygulanabilen yosunlardan elde edilen alginik asitler sayesinde bitkide çok hızlı şekilde taşınır. Bitkinin en kısa zamanda sağlıklı büyümesini sağlar. Köklenmeyi teşvik eder topraktan besin emilimini arttırır. Toprağın su tutma kapasitesini arttırır. Tuzluluk, aşırı sulama taban suyu yüksekliği gibi olumsuzluklarda bitkinin yeniden sağlığına kavuşmasını sağlar."
+  },
+  "analysis": [
+   {
+    "tr": "Organik Madde",
+    "value": "%12"
+   },
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "value": "%2"
+   },
+   {
+    "tr": "Alginik Asit",
+    "value": "%0,7"
+   },
+   {
+    "tr": "Maksimum EC (dS/m)",
+    "value": "10"
+   },
+   {
+    "tr": "pH Aralığı",
+    "value": "9-11"
+   }
+  ],
+  "gallery": [
+   "bix10"
+  ]
+ },
+ {
+  "slug": "florentia",
+  "name": "FLORENTIA 5-20-0",
+  "series": "promark",
+  "category": "npk",
+  "type": {
+   "tr": "NP Gübre Çözeltisi"
+  },
+  "tagline": {
+   "tr": "Bitkinizde fosfor eksikliği mi görüyorsunuz?"
+  },
+  "description": {
+   "tr": "Florentia bitkilerin fosfor ihtiyacını gidermek için farklı fosfor kaynaklarının bir araya getirilmesiyle üretilmiştir. Florentia hızlı ve kolay alınabilir formu ile yüksek etkiye sahiptir."
+  },
+  "analysis": [
+   {
+    "tr": "Toplam Azot (N)",
+    "value": "%5"
+   },
+   {
+    "tr": "Amonyum Azotu (N)",
+    "value": "%2,5"
+   },
+   {
+    "tr": "Üre Azotu (N)",
+    "value": "%2,5"
+   },
+   {
+    "tr": "Suda Çözünür Fosfor Pentaoksit (P₂O₅)",
+    "value": "%20"
+   }
+  ],
+  "gallery": [
+   "florentiakova"
+  ]
+ },
+ {
+  "slug": "mielca",
+  "name": "MIELCA",
+  "series": "promark",
+  "category": "kalsiyum",
+  "type": {
+   "tr": "Kalsiyum Klorür Çözeltisi"
+  },
+  "tagline": {
+   "tr": "Kalsiyum eksikliği varsa"
+  },
+  "description": {
+   "tr": "Mielca'nın üretiminde özel olarak seçilmiş kalsiyum ve bor kaynakları kullanılmıştır. Bu nedenle kalsiyum tanecikleri küçüktür ve kolaylıkla alınır. pH'sı düşük olduğu için topraktan ve yapraktan uygulamalarda alımı çok hızlıdır. Hücre çeperini güçlendirir bitki direncini arttırır."
+  },
+  "analysis": [
+   {
+    "tr": "Suda Çözünür Kalsiyum Oksit (CaO)",
+    "value": "%15"
+   },
+   {
+    "tr": "Suda Çözünür Bor (B)",
+    "value": "%0,3"
+   }
+  ],
+  "gallery": [
+   "mielca1",
+   "mielca5"
+  ]
+ },
+ {
+  "slug": "potatro",
+  "name": "POTATRO 5-0-15",
+  "series": "promark",
+  "category": "npk",
+  "type": {
+   "tr": "NK Gübre Çözeltisi"
+  },
+  "tagline": {
+   "tr": "Potasyum eksikliği mi var?"
+  },
+  "description": {
+   "tr": "Potatro üretilirken potasyum taneleri küçültülür bu nedenle alınması ve taşınması en zor olan elementlerden olan potasyum hem daha iyi şelatlanır, hem daha hızlı alınır, hem de daha iyi taşınabilir. Potasyum ihtiyacı olan bitkilerde potasyum eksikliğini gidermek için en iyi ürün Potatro'dur."
+  },
+  "analysis": [
+   {
+    "tr": "Toplam Azot (N)",
+    "value": "%5"
+   },
+   {
+    "tr": "Üre Azotu (N)",
+    "value": "%5"
+   },
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "value": "%15"
+   }
+  ],
+  "gallery": [
+   "potatrokova"
+  ]
+ },
+ {
+  "slug": "statera",
+  "name": "STATERA 7-7-7",
+  "series": "promark",
+  "category": "npk",
+  "type": {
+   "tr": "NPK Gübre Çözeltisi"
+  },
+  "tagline": {
+   "tr": "Dengeli gelişim mi istiyorsunuz?"
+  },
+  "description": {
+   "tr": "Statera bitkilerde dengeli ve hızlı bir gelişim yapması için özel katkılarla üretilmiştir. Olumsuz hava ve toprak şartlarında dahi tamamı alınır ve çalışır. Statera içeriğindeki mikroelementlerle bitkinin vitamin sentezlemesine yardımcı olur."
+  },
+  "analysis": [
+   {
+    "tr": "Toplam Azot (N)",
+    "value": "%7"
+   },
+   {
+    "tr": "Üre Azotu (N)",
+    "value": "%7"
+   },
+   {
+    "tr": "Toplam Fosfor Pentaoksit (P₂O₅)",
+    "value": "%7"
+   },
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "value": "%7"
+   },
+   {
+    "tr": "Suda Çözünür Demir (Fe)",
+    "value": "%0,02"
+   },
+   {
+    "tr": "Suda Çözünür Mangan (Mn)",
+    "value": "%0,05"
+   },
+   {
+    "tr": "Suda Çözünür Çinko (Zn)",
+    "value": "%0,04"
+   }
+  ],
+  "gallery": [
+   "staterrakova"
+  ]
+ },
+ {
+  "slug": "rotynix",
+  "name": "ROTYNIX",
+  "series": "promark",
+  "category": "npk",
+  "type": {
+   "tr": "NP'li Sıvı Organomineral Gübre"
+  },
+  "tagline": {
+   "tr": "Köklenme sorunu mu var?"
+  },
+  "description": {
+   "tr": "Özel çinko içeriği sayesinde bitki köklerinin büyüme noktalarını uyararak köklenmeyi hızlandırır. Kılcal kök oluşumunu teşvik eder."
+  },
+  "analysis": [],
+  "gallery": [
+   "rotynix1"
+  ]
+ },
+ {
+  "slug": "folnix",
+  "name": "FOLNIX",
+  "series": "promark",
+  "category": "mikro",
+  "type": {
+   "tr": "Çinkolu Gübre Çözeltisi"
+  },
+  "tagline": {
+   "tr": "Çiçeklenme sorunu mu var?"
+  },
+  "description": {
+   "tr": "Özel katkıları ve özel çinko içeriği sayesinde bitkinin büyüme noktalarını uyararak, çiçek gözlerinin oluşmasını sağlar. Mevcut çiçeklerde polen sayısının artmasını sağlar, döllenmeye yardımcı olur."
+  },
+  "analysis": [
+   {
+    "tr": "Suda Çözünür Çinko (Zn)",
+    "value": "%2"
+   }
+  ],
+  "gallery": [
+   "folnix1"
+  ]
+ },
+ {
+  "slug": "trionic",
+  "name": "TRIONIC NV",
+  "series": "promark",
+  "category": "npk",
+  "type": {
+   "tr": "Azotlu Gübre Çözeltisi"
+  },
+  "tagline": {
+   "tr": "Bitkinizde azot eksikliği mi var?"
+  },
+  "description": {
+   "tr": "Azotun 4 formunu içeren Trionic bitkinin tüm azot ihtiyacını giderir. Uçmayan ve yıkanmayan azot formu sayesinde bitkinin azot ihtiyacını hızlı ve uzun süreli olarak giderir. Dokularda gevşeme yapmaz, meyve büyümesine yardımcı olur. Özel olarak işlenen azotun karbon miktarı diğer azot kaynaklarından 10 kat fazladır."
+  },
+  "analysis": [
+   {
+    "tr": "Toplam Azot (N)",
+    "value": "%20"
+   },
+   {
+    "tr": "Amonyum Azotu (N)",
+    "value": "%5"
+   },
+   {
+    "tr": "Organik Azot (N)",
+    "value": "%5"
+   },
+   {
+    "tr": "Üre Azotu (N)",
+    "value": "%10"
+   }
+  ],
+  "gallery": [
+   "trionic1",
+   "trionic5",
+   "trionic20"
+  ]
+ },
+ {
+  "slug": "exom",
+  "name": "EXOM",
+  "series": "promark",
+  "category": "organik",
+  "type": {
+   "tr": "Bitkisel Menşeli Sıvı Organik Gübre"
+  },
+  "tagline": {
+   "tr": "Toprakta biriken elementler alınmıyor mu?"
+  },
+  "description": {
+   "tr": "Yüksek organik madde içeriği sayesinde toprak kalitesini arttırır. Topraktaki mikroorganizma faaliyetlerini hızlandırır. Toprakta birikmiş ve tuzluluğa sebep olan elementlerin organik olarak şelatlanıp, bitkiye taşınmasını sağlar."
+  },
+  "analysis": [
+   {
+    "tr": "Organik Madde",
+    "value": "%55"
+   },
+   {
+    "tr": "Organik Karbon (C)",
+    "value": "%23"
+   },
+   {
+    "tr": "Organik Azot (N)",
+    "value": "%4"
+   },
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "value": "%5"
+   },
+   {
+    "tr": "pH Aralığı",
+    "value": "3-5"
+   }
+  ],
+  "gallery": [
+   "exom1",
+   "exom5",
+   "exom20"
+  ]
+ },
+ {
+  "slug": "dipolyo",
+  "name": "DIPOLYO",
+  "series": "promark",
+  "category": "npk",
+  "type": {
+   "tr": "NP'li Sıvı Organomineral Gübre"
+  },
+  "tagline": {
+   "tr": "Fosfordan fazlasına mı ihtiyacınız var?"
+  },
+  "description": {
+   "tr": "Dipolyo fosforun protein sentezinde görev alarak çiçeklenmenin artmasını sağlar. Bitkinin çiçeklenme için ihtiyacı olan vitaminler, enzimler ve aminoasitlerin harekete geçmesine yardımcı olur. Bitkinin enerji ihtiyacını karşılar. Yaprak renginin daha canlı olmasını sağlar."
+  },
+  "analysis": [
+   {
+    "tr": "Organik Madde",
+    "value": "%15"
+   },
+   {
+    "tr": "Toplam Azot (N)",
+    "value": "%5"
+   },
+   {
+    "tr": "Amonyum Azotu (N)",
+    "value": "%3"
+   },
+   {
+    "tr": "Üre Azotu (N)",
+    "value": "%2"
+   },
+   {
+    "tr": "Toplam Fosfor Pentaoksit (P₂O₅)",
+    "value": "%15"
+   },
+   {
+    "tr": "Suda Çözünür Fosfor Pentaoksit (P₂O₅)",
+    "value": "%15"
+   },
+   {
+    "tr": "Suda Çözünür Çinko (Zn)",
+    "value": "%2"
+   },
+   {
+    "tr": "Maksimum Klor (Cl)",
+    "value": "%1"
+   },
+   {
+    "tr": "pH Aralığı",
+    "value": "3-5"
+   }
+  ],
+  "gallery": [
+   "dipolyo1",
+   "dipolyo5",
+   "dipolyo20"
+  ]
+ },
+ {
+  "slug": "avola",
+  "name": "AVOLA",
+  "series": "promark",
+  "category": "organik",
+  "type": {
+   "tr": "Bitkisel Menşeli Aminoasit İçeren Sıvı Organik Gübre"
+  },
+  "tagline": {
+   "tr": "Bitkiniz çalışmıyor mu?"
+  },
+  "description": {
+   "tr": "İçeriğindeki L Tipi Aminoasitler sayesinde bitkinin çevresel faktörlere bağlı kalmadan protein sentezlemesini ve bitkinin durmadan çalışmasını sağlar. Bitkinin olumsuz çevresel faktörlerinden etkilenmesini engeller. Stres giderir. Polen oluşumuna katkıda bulunur. Protein sentezi sayesinde meyve büyümesine yardımcı olur. Uzun yıllardır ekim yapılan topraklarda eksilen karbonun tamamlanmasına yardımcı olur."
+  },
+  "analysis": [
+   {
+    "tr": "Organik Madde",
+    "value": "%25"
+   },
+   {
+    "tr": "Organik Karbon (C)",
+    "value": "%14"
+   },
+   {
+    "tr": "Organik Azot (N)",
+    "value": "%2"
+   },
+   {
+    "tr": "Serbest Aminoasitler",
+    "value": "%10"
+   },
+   {
+    "tr": "pH Aralığı",
+    "value": "2-4"
+   }
+  ],
+  "gallery": [
+   "avola1",
+   "avola5",
+   "avola20"
+  ]
+ },
+ {
+  "slug": "nutriorgan",
+  "name": "NUTRIORGAN",
+  "series": "kaf",
+  "category": "organik",
+  "type": {
+   "tr": "Bitkisel Menşeli Sıvı Fulvik Asit"
+  },
+  "description": {
+   "tr": "NUTRIORGAN %40'lık fülvik asit içeriği ile çok iyi bir köklendiricidir. Hücrelerin ihtiyacı olan vitamin ve besinlerin sentezini sağlayan bir üründür. Bitkilerden elde edilmiş olan tamamen doğal bir bitki özüdür. Elde edilirken kimyasal madde veya asit kullanılmamaktadır. NUTRIORGAN antioksidanlar, enzimler, amino asitler ve daha birçok maddenin doğal bir deposudur. Hem toprakta hem de bitki içerisinde aktif olarak çalışır. NUTRIORGAN iz elementler ve N-P-K’yı şelatlar. Toprakta alınamayan iz elementler ve N-P-K’nın alınabilir hale gelmesini sağlar. Böylece toprakta bu elementlerin birikiminden dolayı tuz oluşumunu engeller. Yapraktan uygulanabilen iz elementler, yaprak gübreleri, sistemik etkili ilaçların yapraklar tarafından daha fazla alınmasını sağlayarak uygulanan ürünün yarayışlılığını artırır. Topraktaki yararlı mikro organizmaların sayısını artırarak toprak kalitesini yükseltir. Eski ve yorgun toprakların yenilenmesine yardımcı olur. Klorofil sentezini hızlandırır ve arttırır."
+  },
+  "analysis": [
+   {
+    "tr": "Toplam Fulvik Asit",
+    "value": "% 40"
+   },
+   {
+    "tr": "Organik Madde",
+    "value": "% 60"
+   },
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "value": "% 4"
+   },
+   {
+    "tr": "Toplam Aminoasitler",
+    "value": "% 4"
+   }
+  ],
+  "packs": [
+   "5",
+   "20"
+  ],
+  "catalogPage": 4
+ },
+ {
+  "slug": "vitaradico",
+  "name": "VITARADICO",
+  "series": "kaf",
+  "category": "organik",
+  "type": {
+   "tr": "Bitkisel Menşeli Sıvı Fulvik Asit"
+  },
+  "description": {
+   "tr": "VITARADICO yüksek içeriği ile çok iyi bir köklendiricidir. Yüksek fulvik asit içeriği ile bitki tarafından tamamen doğal olarak algılanır ve hızlı bir şekilde alınır. Fulvik Asitler çok iyi birer şelat maddesi olduğundan VITARADICO beraberinde kullanılan elementlerin topraktan alınmasında ve taşınmasında görev yapar. Potasyumun en iyi taşıyıcısı Fulvik asitlerdir. Bitki VITARADICO'yu doğal bir ürün olarak tanımladığı için, VITARADICO ve şelatladığı bütün elementleri alır ve bütün organlarına hızla taşır. Böylece toprakta iz element ve ağır metal birikimi olmaz. VITARADICO kullanılan topraklarda tuzluluk azalır, organik madde artar, toprak gençleşir. VITARADICO içeriğindeki bulunan yüksek miktardaki B vitaminleri sayesinde, bitkide çok hızlı sonuç gösterir. Bitkiler kötü hava ve toprak şartları nedeni ile vitamin sentezlemekte zorlanırlar. VITARADICO uygulandığı zaman bitkide bu vitaminlerin eksikliği görülmez ve bitki doğal gelişimine devam eder. VITARADICO içeriğindeki vitaminler sayesinde enzim faaliyetlerini arttırır böylece fotosentez, protein sentezi, enerji üretimi gibi hücresel faaliyetleri hızlandırır. Humik Asitler toprakta hareketsizdirler ve belli pH aralığında görev yaparlar. Fulvik Asitler ise hem topraktan elementleri bitkiye taşır hem de bitki içerisinde element taşınmasında aktif görev alır. Her pH aralığında hareketlidirler ve görev yaparlar. VITARADICO yüksek fulvik asit içeriği sayesinde bitkide ve toprakta aktif olarak görev alır."
+  },
+  "analysis": [
+   {
+    "tr": "Toplam Fulvik Asit",
+    "value": "% 40"
+   },
+   {
+    "tr": "Organik Madde",
+    "value": "% 65"
+   },
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "value": "% 4"
+   },
+   {
+    "tr": "Toplam Azot (N)",
+    "value": "% 4"
+   },
+   {
+    "tr": "Yüksek Miktarda B Vitaminleri",
+    "value": ""
+   }
+  ],
+  "packs": [
+   "5",
+   "20"
+  ],
+  "catalogPage": 5
+ },
+ {
+  "slug": "maxivital",
+  "name": "MAXIVITAL",
+  "series": "kaf",
+  "category": "organik",
+  "type": {
+   "tr": "Bitkisel Menşeli Sıvı Fulvik Asit"
+  },
+  "description": {
+   "tr": "MAXIVITAL yüksek içeriği ile çok iyi bir köklendiricidir. İçerdiği serbest aminoasitlerle bitki metabolizmasını hareketlendirir. Gelişimi hızlandırarak stres koşullarına karşı dayanıklılık sağlar. Fulvik Asitler çok iyi birer şelat maddesi olduğundan MAXIVITAL beraberinde kullanılan elementleri topraktan bitkiye taşır; bitkinin bütün organlarına aynı anda ve çok hızlı taşınır. Potasyumun en iyi taşıyıcısı MAXIVITAL’dir. Toprakta iz element ve ağır metal birikiminin azalmasına yardımcı olur. Kullanılan topraklarda tuzluluk azalır, organik madde artar, toprak gençleşir. Bitkiler kötü hava ve toprak şartları nedeni ile vitamin sentezlemekte zorlanırlar. MAXIVITAL uygulandığı zaman bitkide bu vitaminlerin eksikliği görülmez ve bitki doğal gelişimine devam eder. İçerdiği vitaminler sayesinde enzim faaliyetlerini arttırır böylece fotosentez, protein sentezi, enerji üretimi gibi hücresel faaliyetleri hızlandırır. MAXIVITAL her pH aralığında çalışır, toprak ayırt etmeksizin netice verir."
+  },
+  "analysis": [
+   {
+    "tr": "Toplam Fulvik Asit",
+    "value": "% 40"
+   },
+   {
+    "tr": "Organik Madde",
+    "value": "% 65"
+   },
+   {
+    "tr": "Toplam Azot (N)",
+    "value": "% 3"
+   },
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "value": "% 4"
+   },
+   {
+    "tr": "Serbest Aminoasitler",
+    "value": "% 4"
+   },
+   {
+    "tr": "Yüksek Miktarda Vitamin",
+    "value": ""
+   }
+  ],
+  "packs": [
+   "5",
+   "20"
+  ],
+  "catalogPage": 6
+ },
+ {
+  "slug": "nator",
+  "name": "NATOR",
+  "series": "kaf",
+  "category": "organik",
+  "type": {
+   "tr": "Bitkisel Menşeli Sıvı Organik Gübre"
+  },
+  "description": {
+   "tr": "NATOR yüksek içeriği ile çok iyi bir köklendiricidir. İçerdiği serbest aminoasitlerle bitki metabolizmasını hareketlendirir. Gelişimi hızlandırarak stres koşullarına karşı dayanıklılık sağlar. Fulvik Asitler çok iyi birer şelat maddesi olduğundan NATOR beraberinde kullanılan elementleri topraktan bitkiye taşır; bitkinin bütün organlarına aynı anda ve çok hızlı taşınır. Potasyumun en iyi taşıyıcısı NATOR'dur. Toprakta iz element ve ağır metal birikiminin azalmasına yardımcı olur. Kullanılan topraklarda tuzluluk azalır, organik madde artar, toprak gençleşir. Bitkiler kötü hava ve toprak şartları nedeni ile vitamin sentezlemekte zorlanırlar. NATOR uygulandığı zaman bitkide bu vitaminlerin eksikliği görülmez ve bitki doğal gelişimine devam eder. İçerdiği vitaminler sayesinde enzim faaliyetlerini arttırır böylece fotosentez, protein sentezi, enerji üretimi gibi hücresel faaliyetleri hızlandırır. NATOR her pH aralığında çalışır, toprak ayırt etmeksizin netice verir."
+  },
+  "analysis": [
+   {
+    "tr": "Toplam Fulvik Asit",
+    "value": "% 40"
+   },
+   {
+    "tr": "Organik Madde",
+    "value": "% 65"
+   },
+   {
+    "tr": "Toplam Azot (N)",
+    "value": "% 3"
+   },
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "value": "% 4"
+   },
+   {
+    "tr": "Serbest Aminoasitler",
+    "value": "% 4"
+   },
+   {
+    "tr": "Yüksek Miktarda Vitamin",
+    "value": ""
+   }
+  ],
+  "packs": [
+   "5",
+   "20"
+  ],
+  "catalogPage": 6
+ },
+ {
+  "slug": "fixel",
+  "name": "FIXEL",
+  "series": "kaf",
+  "category": "organik",
+  "type": {
+   "tr": "Organik Karbon ve Sıvı Aminoasit"
+  },
+  "description": {
+   "tr": "FIXEL, bitkisel menşeli aminoasitler, enzimler ve yüksek oranda organik maddeden oluşan organik bir üründür. FIXEL'in yapısında sadece bitkisel aminoasitler bulunmaktadır. Bu nedenle alımı ve bitki içerisinde faaliyeti çok hızlıdır. İklim koşulları nasıl olursa olsun bitki tarafından alınır ve kullanılır. Bitkide fotosentezin artmasını dolayısıyla daha fazla besin üretilmesini sağlar. FIXEL bünyesindeki enzimler sayesinde bitkinin bütün yaşamsal faaliyetlerinde yer alır ve protein sentezini arttırır. Meyvenin daha hızlı büyümesini ve hasatta erkencilik sağlar. Sezon boyunca bitkinin genç ve sağlıklı kalmasını sağlayarak bitkide stres koşullarından meydana gelen arazları engeller. Topraktaki Organik Karbon her toprak işlemede %50 azalır. Yıllar geçtikçe Organik Karbon miktarı düşer, toprak verimsizleşir. FIXEL uygulanarak toprak Organik Karbonca zenginleştirilebilir"
+  },
+  "analysis": [
+   {
+    "tr": "Organik Madde",
+    "value": "% 50"
+   },
+   {
+    "tr": "Organik Karbon (C)",
+    "value": "% 29"
+   },
+   {
+    "tr": "Serbest Aminoasitler",
+    "value": "% 16"
+   },
+   {
+    "tr": "Toplam Azot (N)",
+    "value": "% 8"
+   }
+  ],
+  "packs": [
+   "5",
+   "10",
+   "20"
+  ],
+  "catalogPage": 7
+ },
+ {
+  "slug": "energetico",
+  "name": "ENERGETICO",
+  "series": "kaf",
+  "category": "organik",
+  "type": {
+   "tr": "Bitkisel Menşeli Aminoasit İçeren Sıvı Organik Gübre"
+  },
+  "description": {
+   "tr": "ENERGETICO, bitkisel menşeli aminoasitler, enzimler ve yüksek oranda organik maddeden oluşan organik bir üründür. ENERGETICO'nun yapısında sadece bitkisel aminoasitler bulunmaktadır. Bu nedenle alımı ve bitki içerisinde faaliyeti çok hızlıdır. İklim koşulları nasıl olursa olsun bitki tarafından alınır ve kullanılır. Bitkide fotosentezin artmasını dolayısıyla daha fazla besin üretilmesini sağlar. ENERGETICO bünyesindeki enzimler sayesinde bitkinin bütün yaşamsal faaliyetlerinde yer alır ve protein sentezini arttırır. Meyvenin daha hızlı büyümesini ve hasatta erkencilik sağlar. Sezon boyunca bitkinin genç ve sağlıklı kalmasını sağlayarak bitkide stres koşullarından meydana gelen arazları engeller. Topraktaki Organik Karbon her toprak işlemede %50 azalır. Yıllar geçtikçe Organik Karbon miktarı düşer, toprak verimsizleşir. ENERGETICO uygulanarak toprak Organik Karbonca zenginleştirilebilir"
+  },
+  "analysis": [
+   {
+    "tr": "Organik Madde",
+    "value": "% 40"
+   },
+   {
+    "tr": "Organik Karbon (C)",
+    "value": "% 18"
+   },
+   {
+    "tr": "Serbest Aminoasitler",
+    "value": "% 12"
+   },
+   {
+    "tr": "Toplam Azot (N)",
+    "value": "% 3"
+   },
+   {
+    "tr": "Organik Azot (N)",
+    "value": "% 1"
+   },
+   {
+    "tr": "pH",
+    "value": "5 - 7"
+   }
+  ],
+  "packs": [
+   "1",
+   "5",
+   "10",
+   "20"
+  ],
+  "catalogPage": 7
+ },
+ {
+  "slug": "marlon-10",
+  "name": "MARLON 10",
+  "series": "kaf",
+  "category": "organik",
+  "type": {
+   "tr": "Bitkisel Menşeli Sıvı Aminoasit"
+  },
+  "description": {
+   "tr": "MARLON enzimatik hidroliz yoluyla elde edilmiş L formundaki bitkisel aminoasitler enzimler ve yüksek miktarda organik maddeden oluşan bitkisel bir üründür. (D formundaki inaktif aminoasitleri içermez. ) MARLON'un içerdiği aminoasitler: L- Alanine L- Arginine L- AsparaticAcid L- Glutamic Acid L- Glycine L- Histidine L- Leucine L- Isoleucine L- Lysine L- Methionine L- Phenylalanine L- Proline L- Tyrosine L- Valine MARLON bitki gelişiminin düzenlenmesinde büyük katkı sağlar. Fotosentezi arttırarak besin artışı sağlar. Döllenme ve meyve oluşumunda başrol oynar. Bitkinin döllenme ve meyveye dönme dönemlerinde yüksek miktarda aminoasit ihtiyacı oluşur. Bu dönemde bitki stres koşulları altında ise veya yeterli miktarda aminoasit temin edilmezse döllenme oluşmaz. MARLON içerdiği yüksek miktardaki aminoasit ile bitkinin ihtiyaçlarını karşılar. MARLON iz elementleri şelatlar. İz elementlerin bitki içersine kolayca geçmesini sağlar. Beraberinde uygulanan bitki besin elementleri ve sistemik ilaçların bitkiye kolayca geçerek daha faydalı olmalarını sağlar. Stomalarda açılma yönünde hareketlilik sağlar. Bitkinin direncini arttırarak kötü hava ve çevre koşulların karşı dayanıklı olmasını sağlar. Aminoasitler hormonların ve enzimlerin yapısında bulunurlar. MARLON içerdiği aminoasitler sayesinde enzim ve hormon faaliyetlerini arttırır."
+  },
+  "analysis": [
+   {
+    "tr": "Organik Madde",
+    "value": "% 40"
+   },
+   {
+    "tr": "Serbest Aminoasitler",
+    "value": "% 16"
+   },
+   {
+    "tr": "Toplam Azot (N)",
+    "value": "% 6"
+   },
+   {
+    "tr": "Enzimler",
+    "value": ""
+   }
+  ],
+  "packs": [
+   "1",
+   "5"
+  ],
+  "catalogPage": 8
+ },
+ {
+  "slug": "sinestre",
+  "name": "SINESTRE",
+  "series": "kaf",
+  "category": "organik",
+  "type": {
+   "tr": "Bitkisel Menşeli Aminoasit İçeren Sıvı Organik Gübre"
+  },
+  "description": {
+   "tr": "Sinestre özel formülü sayesinde bitkinin gelişim periyoduna bağlı olarak o dönemde bitkinin faaliyeti ne ise (Bitki büyümesi, çiçeklenme, köklenme vs. ) o faaliyeti hızlandırır. Hücre bölünmesi ve büyümesi, verim artışı, meyve büyütme, bitki gelişimi gibi etkileri vardır. Vegetatif gelişim dönemini kısaltır. Stresi giderir, çevresel şartlara uyumu sağlar."
+  },
+  "analysis": [
+   {
+    "tr": "Organik Madde",
+    "value": "%40"
+   },
+   {
+    "tr": "Organik Karbon (C)",
+    "value": "% 17"
+   },
+   {
+    "tr": "Serbest Aminoasitler",
+    "value": "%22"
+   },
+   {
+    "tr": "Toplam Azot (N)",
+    "value": "%4"
+   },
+   {
+    "tr": "Organik Azot (N)",
+    "value": "%2"
+   },
+   {
+    "tr": "pH",
+    "value": "3,5-5,5"
+   }
+  ],
+  "packs": [
+   "1",
+   "5"
+  ],
+  "catalogPage": 9
+ },
+ {
+  "slug": "especta",
+  "name": "ESPECTA",
+  "series": "kaf",
+  "category": "organik",
+  "type": {
+   "tr": "Sıvı Deniz Yosunu"
+  },
+  "description": {
+   "tr": "Especta içeriğindeki Alginik Asitler ve organik madde sayesinde bitkide vegetatif gelişimi hızlandırır, bitki rengini koyulaştırır. Fotosentezi hızlandırır. Damlamadan uygulamalarda topraktaki mikroorganizma sayısının artmasını sağlar. Toprağı düzenler. Especta sonuca hızlı gitmek isteyenlerin tercihidir."
+  },
+  "analysis": [
+   {
+    "tr": "Organik Madde",
+    "value": "% 5"
+   },
+   {
+    "tr": "Alginik Asit",
+    "value": "% 2"
+   },
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "value": "% 2"
+   },
+   {
+    "tr": "EC",
+    "value": "% 4,27 dS/m"
+   },
+   {
+    "tr": "pH Aralığı",
+    "value": "9 - 11"
+   }
+  ],
+  "packs": [
+   "1",
+   "5",
+   "10",
+   "20"
+  ],
+  "catalogPage": 10
+ },
+ {
+  "slug": "excito-gg",
+  "name": "EXCITO GG",
+  "series": "kaf",
+  "category": "organik",
+  "type": {
+   "tr": "Bitkisel Menşeli Aminoasit İçeren Sıvı Organik Gübre"
+  },
+  "description": {
+   "tr": "Bitkide bir uyanış, durgun dönemlerde hareket sağlamak için kullanılır. İçerdiği aminoasitler sayesinde bitki gelişiminin yavaşlamasını ve durmasını engeller."
+  },
+  "analysis": [
+   {
+    "tr": "Organik Madde",
+    "value": "% 40"
+   },
+   {
+    "tr": "Organik Karbon (C)",
+    "value": "% 14"
+   },
+   {
+    "tr": "Organik Azot (N)",
+    "value": "% 1,5"
+   },
+   {
+    "tr": "Serbest Aminoasitler",
+    "value": "% 10"
+   },
+   {
+    "tr": "pH Aralığı",
+    "value": "3,5 - 5,5"
+   }
+  ],
+  "packs": [
+   "0,5",
+   "1"
+  ],
+  "catalogPage": 10
+ },
+ {
+  "slug": "braxin",
+  "name": "BRAXIN",
+  "series": "kaf",
+  "category": "organik",
+  "type": {
+   "tr": "Sıvı Deniz Yosunu"
+  },
+  "description": {
+   "tr": "Bitkide generatif ve vegetatif gelişimi hızlandırır, çiçeklenmeyi arttırır. Bitkinin bütün gelişim dönemlerinde uygulanabilir."
+  },
+  "analysis": [
+   {
+    "tr": "Organik Madde",
+    "value": "% 5"
+   },
+   {
+    "tr": "Alginik Asit",
+    "value": "% 1"
+   },
+   {
+    "tr": "EC",
+    "value": "% 4,27 dS/m"
+   },
+   {
+    "tr": "pH Aralığı",
+    "value": "9 - 11"
+   }
+  ],
+  "packs": [
+   "0,5",
+   "1"
+  ],
+  "catalogPage": 11
+ },
+ {
+  "slug": "salifol",
+  "name": "SALIFOL",
+  "series": "kaf",
+  "category": "mikro",
+  "type": {
+   "tr": "Çinko Sülfat İçerikli Gübre Çözeltisi"
+  },
+  "description": {
+   "tr": "Salifol içeriğindeki çinko sayesinde çiçeklenmeyi hızlandırır ve arttırır. Bitki direnci artar. Her dönemde uygulanabilir"
+  },
+  "analysis": [
+   {
+    "tr": "Suda Çözünür Çinko (Zn)",
+    "value": "%2"
+   }
+  ],
+  "packs": [
+   "0,5",
+   "1",
+   "5"
+  ],
+  "catalogPage": 11
+ },
+ {
+  "slug": "radiactive",
+  "name": "RADIACTIVE",
+  "series": "kaf",
+  "category": "ozel",
+  "type": {
+   "tr": "Köklendirici BIO-Aktivatör"
+  },
+  "description": {
+   "tr": "RADIACTIVE Sıcak ve soğuk dönemlerdeki zor koşullarda köklerde oluşacak stres koşullarını önler ve kök gelişimini teşvik eder. Yeni dikim yapılan bitkilerde kılcal (emici) kök oluşumunu garanti eder. Şaşırtma sonrası stresle mücadele süresini kısaltır. RADIACTIVE, çelikle köklendirme uygulamalarında çok hızlı kök oluşumu sağlar. RADIACTIVE kök hastalık ve zararlılarına karşı daha dirençli kök oluşumu sağlar. Amino asitler, polisakkaritler ve doğal köklendirme adjuvantları içerir."
+  },
+  "analysis": [
+   {
+    "tr": "Suda Çözünür Mangan (Mn)",
+    "value": "% 0,8"
+   },
+   {
+    "tr": "Suda Çözünür Çinko (Zn)",
+    "value": "% 1,2"
+   }
+  ],
+  "packs": [
+   "0,5"
+  ],
+  "catalogPage": 12
+ },
+ {
+  "slug": "nat-k",
+  "name": "NAT-K",
+  "series": "kaf",
+  "category": "ozel",
+  "type": {
+   "tr": "Meyve Büyütücü ve Renklendirici"
+  },
+  "description": {
+   "tr": "Nat-K özel formülü sayesinde sebzelerde ve meyvelerde hücre bölünmesini hızlandırarak homojen meyve büyümesi ve erkencilik sağlar. Meyvenin renk pigmentlerinin dönüşümünü hızlandırır, böylece meyvede renklenmeyi hızlandırır, kaliteli renk oluşumunu sağlar. Meyvenin şeker oranını arttırır, raf ömrünü uzatır. Nat-K enzim aktivitesine, fotosenteze, bitki besin elementlerinin ve fotosentez ürünlerinin taşınmalarına yardım eder, protein kapsamını artırır."
+  },
+  "analysis": [
+   {
+    "tr": "Toplam Azot (N)",
+    "value": "% 3"
+   },
+   {
+    "tr": "Üre Azotu (NH₂-N)",
+    "value": "% 3"
+   },
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "value": "% 23"
+   },
+   {
+    "tr": "pH",
+    "value": "7-8"
+   },
+   {
+    "tr": "Yüksek Oranda Organik Asit",
+    "value": ""
+   }
+  ],
+  "packs": [
+   "1",
+   "5"
+  ],
+  "catalogPage": 13
+ },
+ {
+  "slug": "auxi-c",
+  "name": "AUXI C",
+  "series": "kaf",
+  "category": "ozel",
+  "type": {
+   "tr": "Sıvı Deniz Yosunu"
+  },
+  "description": {
+   "tr": "Bitkilerde gelişmeyi ve bitkinin boyca büyümesini sağlar. Hücre bölünmesi, büyümesinde etkilidir. Bitkinin güneşe yönelmesini sağlar. Stomaların açılmasında görev alır. Yaprağın, döllenmiş çiçeğin ve meyvenin dökülmesini engeller. Meyve oluşumunda görev alır. Topraktan ve yapraktan uygulanabilir."
+  },
+  "analysis": [
+   {
+    "tr": "Organik Madde",
+    "value": "% 7,5"
+   },
+   {
+    "tr": "Toplam Oksinler",
+    "value": "% 2"
+   },
+   {
+    "tr": "Toplam Sitokininler",
+    "value": "% 0,05"
+   },
+   {
+    "tr": "Alginik Asit",
+    "value": "% 0,5"
+   },
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "value": "% 1"
+   },
+   {
+    "tr": "EC",
+    "value": "% 6,12 dS/m"
+   },
+   {
+    "tr": "pH Aralığı",
+    "value": "10-12"
+   }
+  ],
+  "packs": [
+   "0,5",
+   "1"
+  ],
+  "catalogPage": 14
+ },
+ {
+  "slug": "cyto-a",
+  "name": "CYTO A",
+  "series": "kaf",
+  "category": "ozel",
+  "type": {
+   "tr": "Sıvı Sitokinin"
+  },
+  "description": {
+   "tr": "Dal ve sürgün oluşturur, tomurcuk gelişimini sağlar. Yan dallanmayı teşvik ederek kontrolsüz boylanmayı dengeler. Bitkide besin dağılımını organize eder. Yaşlanmayı geciktirici etkisi vardır, bitkiyi daima genç tutar. Topraktan ve yapraktan uygulanabilir."
+  },
+  "analysis": [
+   {
+    "tr": "Organik Madde",
+    "value": "% 7,5"
+   },
+   {
+    "tr": "Toplam Oksinler",
+    "value": "% 0,2"
+   },
+   {
+    "tr": "Toplam Sitokininler",
+    "value": "% 1"
+   },
+   {
+    "tr": "Alginik Asit",
+    "value": "% 0,5"
+   },
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "value": "% 7"
+   },
+   {
+    "tr": "EC",
+    "value": "% 5,21 dS/m"
+   },
+   {
+    "tr": "pH Aralığı",
+    "value": "10-12"
+   }
+  ],
+  "packs": [
+   "0,5",
+   "1"
+  ],
+  "catalogPage": 14
+ },
+ {
+  "slug": "tensotec",
+  "name": "TENSOTEC",
+  "series": "kaf",
+  "category": "ozel",
+  "type": {
+   "tr": "Aktivatör"
+  },
+  "description": {
+   "tr": "Yapraktan uygulamalarda kullanılır. Suyun pH'sını düzenler (Düşükse yükseltir, yüksekse düşürür). İlaçların yarılanma ömrünü uzatarak ilacın uygulama esnasında etkisizleşmesini engeller. Beraberinde kullanılan ilaç ve gübrelerin etkin şekilde kullanılmasını sağlayan özel bir aktivatördür. Yayıcı yapıştırıcı özelliği vardır. İlacın ve gübrenin yıkanmadan bitki tarafından hızla alınmasını sağlar."
+  },
+  "analysis": [],
+  "packs": [
+   "0,5",
+   "1"
+  ],
+  "catalogPage": 15
+ },
+ {
+  "slug": "aztec",
+  "name": "AZTEC",
+  "series": "kaf",
+  "category": "ozel",
+  "type": {
+   "tr": "Aktivatör"
+  },
+  "description": {
+   "tr": "Topraktan uygulamalarda kullanılır. Suyun pH'sını düzenler (Düşükse yükseltir, yüksekse düşürür). Beraberinde kullanılan ilaç ve gübrelerin toprakta yıkanmadan, yarılanmadan etkin şekilde kullanılmasını sağlayan özel bir aktivatördür."
+  },
+  "analysis": [],
+  "packs": [
+   "1",
+   "5"
+  ],
+  "catalogPage": 15
+ },
+ {
+  "slug": "rapido-n32",
+  "name": "RAPIDO N32",
+  "series": "kaf",
+  "category": "npk",
+  "type": {
+   "tr": "Yavaş Salınımlı Sıvı Azot"
+  },
+  "description": {
+   "tr": "RAPIDO N32 azotun 3 formunu içerir. Nitrat Azotu vejatatif gelişimi hızlandırırken Amonyak ve üre Azotu yavaş salınımıyla kademeli gelişim sağlar. İçeriğindeki yüksek miktardaki azot sayesinde azot eksikliğinin sebep olduğu arazları giderir. Bitkilerin yapraklarının sararmasını önler. Güçlü ve koyu renk olmasını sağlar. RAPIDO N32 ot ilaçları ile birlikte kullanıldığında etkinliğini arttırır."
+  },
+  "analysis": [
+   {
+    "tr": "Toplam Azot (N)",
+    "value": "% 32"
+   },
+   {
+    "tr": "Amonyak Azotu (NH₄-N)",
+    "value": "% 8"
+   },
+   {
+    "tr": "Nitrat Azotu (NO₃-N)",
+    "value": "% 8"
+   },
+   {
+    "tr": "Üre Azotu (NH₂-N)",
+    "value": "% 16"
+   }
+  ],
+  "packs": [
+   "5",
+   "20"
+  ],
+  "catalogPage": 16
+ },
+ {
+  "slug": "actical-40",
+  "name": "ACTICAL 40",
+  "series": "kaf",
+  "category": "kalsiyum",
+  "type": {
+   "tr": "Kalsiyum Format"
+  },
+  "description": {
+   "tr": "Dünyada ve ülkemizde tarımda kullanılan yeni bir kalsiyum kaynağı olan kalsiyum format içerir. %60 karboksilik asit içeriği ile hem gübrelerle hem ilaçlarla karışabilir. Topraktaki kalsiyumu ve diğer elementleri şelatlayarak alımını sağlar. Toprak tuzlanmasını engeller. Bitki dokularını sertleştirerek bitki direncini arttırır. Damlamadan da uygulanır."
+  },
+  "analysis": [
+   {
+    "tr": "Suda Çözünür Kalsiyum Oksit (CaO)",
+    "value": "%40"
+   },
+   {
+    "tr": "Polikarboksilik Asit",
+    "value": "% 60"
+   }
+  ],
+  "packs": [],
+  "catalogPage": 16
+ },
+ {
+  "slug": "arvento",
+  "name": "ARVENTO",
+  "series": "kaf",
+  "category": "ozel",
+  "type": {
+   "tr": "Bitkisel Kaynaklı Kök Güçlendirici"
+  },
+  "description": {
+   "tr": "Arvento içeriğindeki organik asitler ile toprak tuzluluğunu giderir. Toprağın tuzlu olması, bitki besin elementlerinin toprakta bağ yaptığının belirtisidir. Arvento kullanılarak bu elementlerin çözünerek yarayışlı hale gelmesi sağlanır. Dünya üzerindeki Nematodların bir çoğu tuzlu su ve tuzlu topraklarda bulunur ve buralarda hızla ürerler. Arvento uygulanarak toprak tuzluluğu giderilir. Nematodla mücadele ilaçları ile beraber kullanıldığı taktirde, ilaçların daha faydalı olmasını sağlar."
+  },
+  "analysis": [
+   {
+    "tr": "Polikarboksilik Asit",
+    "value": "%10"
+   }
+  ],
+  "packs": [
+   "5"
+  ],
+  "catalogPage": 17
+ },
+ {
+  "slug": "polical-ultra",
+  "name": "POLICAL Ultra",
+  "series": "kaf",
+  "category": "kalsiyum",
+  "type": {
+   "tr": "Aminoasitli Sıvı Kalsiyum"
+  },
+  "description": {
+   "tr": "POLICAL benzoik, asetik, bütirik, sitrik, malik, karboksilik gibi asit guruplarının yanında L tipi aminoasitleri de ihtiva eden, alınabilirliği ve yarayışlılığı en yüksek kalsiyumdur. Bitki tarafından hava şartları gözetmeksizin alınır. İçerdiği aminoasitler sayesinde stomaların açılmasını sağlar ve bitki içerisinde bu sayede taşınır. POLICAL hücre çeperinde pektat oluşumunu arttırarak, bitkinin direncini arttırır. Bitki hastalıklara karşı dayanıklı hale gelir. Meyvenin raf ömrünü uzatır. Etilen oluşumunu azaltır. Enzim faaliyetlerinin artışına yardımcı olur. Kalsiyum eksikliğinde Zn, Fe, Bor, ve Mn eksikliği görülür. POLICAL uygulandığı taktirde bu elementlerin en hızlı şekilde alınmasını sağlar."
+  },
+  "analysis": [
+   {
+    "tr": "Suda Çözünür Kalsiyum Oksit (CaO)",
+    "value": "% 12"
+   },
+   {
+    "tr": "Toplam Azot (N)",
+    "value": "% 8"
+   }
+  ],
+  "packs": [
+   "1",
+   "5"
+  ],
+  "catalogPage": 17
+ },
+ {
+  "slug": "transchel-fe",
+  "name": "TRANSCHEL Fe",
+  "series": "kaf",
+  "category": "mikro",
+  "type": {
+   "tr": "Demir Şelatı-EDDHA"
+  },
+  "description": {
+   "tr": "TRANSCHEL Fe en zor toprak şartlarında bile mükemmel şekilde çözünür ve çok hızlı şekilde bitki tarafından alınır. Yapısındaki yüksek konsantrasyondaki çok kaliteli %4, 8 Fe ortho-ortho isomeri ile alkali karakterli, aşırı kireçli, topraklarda hiç sorunsuz etkili olabilen demir preparatıdır. Fotosentez işleminden sorumlu olan, klorofil pigmentinin sentezinde kullanılıp, bu sentezi hızlandırıp daha yüksek etkili fotosentez sağlar. TRANSCHEL Fe kaliteli hammaddesi ve yüksek alınabilirliğiyle, çok sıkıntılı kloroz problemlerinde bile kolaylıkla çözüm oluşturur. Biyolojik azot bağlanmasını hızlandırır. Bitki vejetatif gelişmesini teşvik eder. Bitkiye sağlıklı koyu yeşil renk sağlar. Bitkide yaprak kalınlığını arttırır. Besin alımını teşvik eder protein sentezini arttırır ve verim artışına sebep olur. Çiçek ve meyve dökümünü önler. Kullanımı ile daha renkli ve daha parlak, meyve ve çiçek oluşumu sağlanır."
+  },
+  "analysis": [
+   {
+    "tr": "Suda Çözünür Demir (Fe)",
+    "value": "% 6"
+   },
+   {
+    "tr": "Şelat Maddesi EDDHA",
+    "value": "% 4,8"
+   }
+  ],
+  "packs": [
+   "1"
+  ],
+  "catalogPage": 18
+ },
+ {
+  "slug": "alexol",
+  "name": "ALEXOL",
+  "series": "kaf",
+  "category": "ozel",
+  "description": {
+   "tr": "ALEXOL yüksek oranda fosfor ve potasyum içeren sistemik bir üründür. İçeriğindeki fosfor fosforöz asidinden elde edilen fosfit iyonları halindedir. Bu nedenle fosforik asitten elde edilen fosforlu ürünlerden çok daha etkilidir. ALEXOL fitoaleksin üretimini arttırarak bitkinin doğal dayanıklılığını destekler. Çok iyi bir bitki besin kaynağıdır. Boylu giden bitkilere uygulandığında verime yatırarak bitkide boylanmanın yavaşlamasını sağlar. Yapraktan ve kökten uygulanabilir. Çok hızlı alınır, bitkide çift yönlü hareket eder. ALEXOL gövde çapını genişletir, çiçek saplarını kalınlaştırır. Çiçeklenmede faydalıdır."
+  },
+  "analysis": [
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "value": "%20"
+   },
+   {
+    "tr": "pH",
+    "value": "5"
+   }
+  ],
+  "packs": [
+   "1",
+   "5"
+  ],
+  "catalogPage": 18
+ },
+ {
+  "slug": "phylon-coper",
+  "name": "PHYLON COPER",
+  "series": "kaf",
+  "category": "mikro",
+  "type": {
+   "tr": "Sistemik Sıvı Bakır"
+  },
+  "description": {
+   "tr": "Organik asitler içerir ve bu sayede yapraktan ve kökten çok hızlı alınır. PHYLON COPER bitkinin savunma mekanizmasını tetikler. Bitkide çift yönlü hareket eder. Özellikle ksilemde geçirgenliği düzenleyicidir. İçeriğindeki elementler sayesinde fotosentezde görev alır."
+  },
+  "analysis": [
+   {
+    "tr": "Suda Çözünür Bakır (Cu)",
+    "value": "% 4.5"
+   },
+   {
+    "tr": "Suda Çözünür Mangan (Mn)",
+    "value": "% 0,75"
+   },
+   {
+    "tr": "pH",
+    "value": "4"
+   }
+  ],
+  "packs": [
+   "1"
+  ],
+  "catalogPage": 19
+ },
+ {
+  "slug": "foralex",
+  "name": "FORALEX",
+  "series": "kaf",
+  "category": "npk",
+  "type": {
+   "tr": "Fosforaz Asidi"
+  },
+  "description": {
+   "tr": "FORALEX ileri teknoloji ile üretilmiş fosforaz asididir. Fitoaleksin üretimini teşvik ederek bitkinin doğal dayanıklılığını destekler. Kökten ve yapraktan uygulanabilir. FORALEX bitki dokularını güçlendirir. Bitkiler için önemli bir fosfor ve potasyum kaynağıdır."
+  },
+  "analysis": [
+   {
+    "tr": "Suda Çözünür Fosfor Pentaoksit (P₂O₅)",
+    "value": "% 57"
+   },
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "value": "% 38"
+   }
+  ],
+  "packs": [
+   "1"
+  ],
+  "catalogPage": 19
+ },
+ {
+  "slug": "momento-k30",
+  "name": "MOMENTO K30",
+  "series": "kaf",
+  "category": "npk",
+  "type": {
+   "tr": "Potasyum Çözeltisi"
+  },
+  "description": {
+   "tr": "MOMENTO K30 bitki tarafından çok hızlı alınan ve direkt olarak meyveye aktarılan yüksek konsantrasyonda bir potasyum kaynağıdır. Fotosentez işlevinde gerekli bir enzimatik aktivatör olmanın yanında karbonhidrat ve protein sentezini de teşvik eder. Bitkide çiçek sap direncini, meyve tutumunu ve raf ömrünü arttırır. Meyve büyütme, iç dolgunluğunu arttırma ve hasatta erkencilik sağlar. MOMENTO K30 olgunluğa ulaşmış meyvenin renk pigmenti sentezini arttırır. Meyve renginin koyu ve parlak olmasını sağlar. Meyvenin brix değerini arttırarak yüksek oranda tat ve aroma sağlamada yardımcı olur."
+  },
+  "analysis": [
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "value": "%30"
+   }
+  ],
+  "packs": [
+   "1",
+   "5",
+   "10",
+   "20"
+  ],
+  "catalogPage": 20
+ },
+ {
+  "slug": "inventa-0-20-20",
+  "name": "INVENTA 0-20-20",
+  "series": "kaf",
+  "category": "npk",
+  "type": {
+   "tr": "PK Gübre Çözeltisi"
+  },
+  "description": {
+   "tr": "INVENTA özel kimyasal yapısı ile mükemmel fosfor(P) ve potasyum(K) kaynağıdır ve düşük sıcaklıklarda da bitki tarafından çok hızlı şekilde alınır ve kullanılır. Bitkilerin sıcak dönemlerde aşırı boylanma ve boğum aralarının açılmasını kontrol ederek dengeli büyüme neden olur. INVENTA içeriğindeki özel fosfor yapısı bitkilerin gücünü arttırıp kök yapısını güçlendirirken, aynı zamanda içeriğindeki özel potasyum yapısı, protein ve karbonhidrat metabolizmasını yükseltip, verim artışı ve hastalıklara karşı direnç oluşturur. Renk pigmentlerini aktive ederek meyvelerde renk dönüşümünü kolaylaştırır. Meyve tutumu ile birlikte hücre bölünmesini arttırarak yüksek kalibreli meyve iriliği sağlar. Meyve asitliliğini azaltır, brix ve aroma içeriğini arttırır. Meyve rengini düzenler, olgunlaşmasını hızlandırıp hasatta erkencilik sağlar."
+  },
+  "analysis": [
+   {
+    "tr": "Suda Çözünür Fosfor Pentaoksit (P₂O₅)",
+    "value": "% 20"
+   },
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "value": "% 20"
+   }
+  ],
+  "packs": [
+   "5",
+   "10",
+   "20"
+  ],
+  "catalogPage": 21
+ },
+ {
+  "slug": "florise-p55",
+  "name": "FLORISE P55",
+  "series": "kaf",
+  "category": "npk",
+  "type": {
+   "tr": "Kaya Fosfatı Kaynaklı Sıvı Fosfor"
+  },
+  "description": {
+   "tr": "Toprakta fosforun çok büyük bir kısmı bitkilerin yararlanamayacağı formda bulunur. Kireçli ve pH'sı yüksek topraklarda bitkiler fosfordan faydalanamaz. Düşük pH'sı sayesinde her türlü toprak şartında çok hızlı alınır. Kaya fosfatından elde edilen bir fosfor kaynağı olduğundan, bitkinin her daim kullanabileceği bir fosfor kaynağıdır. Yüksek fosfor içeriği ile bitkinin bütün fosfor ihtiyacını giderir. ATP sentezini arttırarak bitkide enerji üretiminin artmasını sağlar. FLORISE P55 çok iyi bir çiçeklendiricidir. Fosfor eksikliğinden oluşan, bitkilerin meyve ve gövdelerinde oluşan mor, kırmızı ve kırmızımsı renklerin giderilmesi için kullanılır."
+  },
+  "analysis": [
+   {
+    "tr": "Suda Çözünür Fosfor Pentaoksit (P₂O₅)",
+    "value": "% 55"
+   }
+  ],
+  "packs": [
+   "5",
+   "10",
+   "20"
+  ],
+  "catalogPage": 21
+ }
+]

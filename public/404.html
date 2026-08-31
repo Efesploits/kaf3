@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Kaf Tarım</title>
+    <script>
+      // GitHub Pages serves this file for any path it cannot resolve. Encode the
+      // wanted route into a query string and bounce to the SPA entry, which puts
+      // it back in the address bar before React Router boots.
+      //
+      // SEGMENTS is how many leading path segments belong to the deployment root:
+      // 1 for https://user.github.io/kaf3/, 0 for a custom domain at the root.
+      (function () {
+        var SEGMENTS = 1
+        var l = window.location
+        var parts = l.pathname.split('/').filter(Boolean)
+        var base = '/' + parts.slice(0, SEGMENTS).join('/') + (SEGMENTS ? '/' : '')
+        var route = parts.slice(SEGMENTS).join('/')
+        // Nothing left to restore - a plain reload would loop forever.
+        if (!route && !l.search) {
+          l.replace(l.origin + base)
+          return
+        }
+        var esc = function (s) {
+          return s.replace(/~/g, '~tilde~').replace(/&/g, '~and~')
+        }
+        var query = '?redirect=/' + esc(route)
+        if (l.search) query += '&q=' + esc(l.search.slice(1))
+        l.replace(l.origin + base + query + l.hash)
+      })()
+    </script>
+  </head>
+  <body></body>
+</html>

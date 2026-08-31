@@ -1,0 +1,484 @@
+{
+ "glossary": {
+  "terms": [
+   {
+    "tr": "Alginik Asit",
+    "en": "Alginic Acid"
+   },
+   {
+    "tr": "Amonyak Azotu (NH₄-N)",
+    "en": "Ammoniacal Nitrogen (NH₄-N)"
+   },
+   {
+    "tr": "Amonyum Azotu (N)",
+    "en": "Ammonium Nitrogen (N)"
+   },
+   {
+    "tr": "EC",
+    "en": "EC"
+   },
+   {
+    "tr": "Enzimler",
+    "en": "Enzymes"
+   },
+   {
+    "tr": "Maksimum EC (dS/m)",
+    "en": "Maximum EC (dS/m)"
+   },
+   {
+    "tr": "Maksimum Klor (Cl)",
+    "en": "Maximum Chlorine (Cl)"
+   },
+   {
+    "tr": "Nitrat Azotu (N)",
+    "en": "Nitrate Nitrogen (N)"
+   },
+   {
+    "tr": "Nitrat Azotu (NO₃-N)",
+    "en": "Nitrate Nitrogen (NO₃-N)"
+   },
+   {
+    "tr": "Organik Azot (N)",
+    "en": "Organic Nitrogen (N)"
+   },
+   {
+    "tr": "Organik Karbon (C)",
+    "en": "Organic Carbon (C)"
+   },
+   {
+    "tr": "Organik Madde",
+    "en": "Organic Matter"
+   },
+   {
+    "tr": "Polikarboksilik Asit",
+    "en": "Polycarboxylic Acid"
+   },
+   {
+    "tr": "Serbest Aminoasitler",
+    "en": "Free Amino Acids"
+   },
+   {
+    "tr": "Suda Çözünür Bakır (Cu)",
+    "en": "Water Soluble Copper (Cu)"
+   },
+   {
+    "tr": "Suda Çözünür Bor (B)",
+    "en": "Water Soluble Boron (B)"
+   },
+   {
+    "tr": "Suda Çözünür Demir (Fe)",
+    "en": "Water Soluble Iron (Fe)"
+   },
+   {
+    "tr": "Suda Çözünür Fosfor Pentaoksit (P₂O₅)",
+    "en": "Water Soluble Phosphorus Pentoxide (P₂O₅)"
+   },
+   {
+    "tr": "Suda Çözünür Kalsiyum Oksit (CaO)",
+    "en": "Water Soluble Calcium Oxide (CaO)"
+   },
+   {
+    "tr": "Suda Çözünür Magnezyum Oksit (MgO)",
+    "en": "Water Soluble Magnesium Oxide (MgO)"
+   },
+   {
+    "tr": "Suda Çözünür Mangan (Mn)",
+    "en": "Water Soluble Manganese (Mn)"
+   },
+   {
+    "tr": "Suda Çözünür Potasyum Oksit (K₂O)",
+    "en": "Water Soluble Potassium Oxide (K₂O)"
+   },
+   {
+    "tr": "Suda Çözünür Çinko (Zn)",
+    "en": "Water Soluble Zinc (Zn)"
+   },
+   {
+    "tr": "Toplam Aminoasitler",
+    "en": "Total Amino Acids"
+   },
+   {
+    "tr": "Toplam Azot (N)",
+    "en": "Total Nitrogen (N)"
+   },
+   {
+    "tr": "Toplam Fosfor Pentaoksit (P₂O₅)",
+    "en": "Total Phosphorus Pentoxide (P₂O₅)"
+   },
+   {
+    "tr": "Toplam Fulvik Asit",
+    "en": "Total Fulvic Acid"
+   },
+   {
+    "tr": "Toplam Oksinler",
+    "en": "Total Auxins"
+   },
+   {
+    "tr": "Toplam Sitokininler",
+    "en": "Total Cytokinins"
+   },
+   {
+    "tr": "Yüksek Miktarda B Vitaminleri",
+    "en": "High Levels of B Vitamins"
+   },
+   {
+    "tr": "Yüksek Miktarda Vitamin",
+    "en": "High Levels of Vitamins"
+   },
+   {
+    "tr": "Yüksek Oranda Organik Asit",
+    "en": "High Levels of Organic Acids"
+   },
+   {
+    "tr": "pH",
+    "en": "pH"
+   },
+   {
+    "tr": "pH Aralığı",
+    "en": "pH Range"
+   },
+   {
+    "tr": "Üre Azotu (N)",
+    "en": "Urea Nitrogen (N)"
+   },
+   {
+    "tr": "Üre Azotu (NH₂-N)",
+    "en": "Urea Nitrogen (NH₂-N)"
+   },
+   {
+    "tr": "Şelat Maddesi EDDHA",
+    "en": "Chelating Agent EDDHA"
+   }
+  ],
+  "types": [
+   {
+    "tr": "Aktivatör",
+    "en": "Activator"
+   },
+   {
+    "tr": "Aminoasitli Sıvı Kalsiyum",
+    "en": "Liquid Calcium with Amino Acids"
+   },
+   {
+    "tr": "Azotlu Gübre Çözeltisi",
+    "en": "Nitrogen Fertiliser Solution"
+   },
+   {
+    "tr": "Azotlu Sıvı Organomineral Gübre",
+    "en": "Liquid Organomineral Nitrogen Fertiliser"
+   },
+   {
+    "tr": "Bitkisel Kaynaklı Kök Güçlendirici",
+    "en": "Plant-Based Root Strengthener"
+   },
+   {
+    "tr": "Bitkisel Menşeli Aminoasit İçeren Sıvı Organik Gübre",
+    "en": "Liquid Organic Fertiliser of Plant Origin Containing Amino Acids"
+   },
+   {
+    "tr": "Bitkisel Menşeli Sıvı Aminoasit",
+    "en": "Liquid Amino Acid of Plant Origin"
+   },
+   {
+    "tr": "Bitkisel Menşeli Sıvı Fulvik Asit",
+    "en": "Liquid Fulvic Acid of Plant Origin"
+   },
+   {
+    "tr": "Bitkisel Menşeli Sıvı Organik Gübre",
+    "en": "Liquid Organic Fertiliser of Plant Origin"
+   },
+   {
+    "tr": "Demir Şelatı-EDDHA",
+    "en": "Iron Chelate-EDDHA"
+   },
+   {
+    "tr": "Fosforaz Asidi",
+    "en": "Phosphorous Acid"
+   },
+   {
+    "tr": "Kalsiyum Format",
+    "en": "Calcium Formate"
+   },
+   {
+    "tr": "Kalsiyum Klorür Çözeltisi",
+    "en": "Calcium Chloride Solution"
+   },
+   {
+    "tr": "Kaya Fosfatı Kaynaklı Sıvı Fosfor",
+    "en": "Liquid Phosphorus from Rock Phosphate"
+   },
+   {
+    "tr": "Köklendirici BIO-Aktivatör",
+    "en": "Rooting BIO-Activator"
+   },
+   {
+    "tr": "Meyve Büyütücü ve Renklendirici",
+    "en": "Fruit Sizing and Colouring Agent"
+   },
+   {
+    "tr": "NK Gübre Çözeltisi",
+    "en": "NK Fertiliser Solution"
+   },
+   {
+    "tr": "NP Gübre Çözeltisi",
+    "en": "NP Fertiliser Solution"
+   },
+   {
+    "tr": "NP'li Sıvı Organomineral Gübre",
+    "en": "Liquid NP Organomineral Fertiliser"
+   },
+   {
+    "tr": "NPK Gübre Çözeltisi",
+    "en": "NPK Fertiliser Solution"
+   },
+   {
+    "tr": "Organik Karbon ve Sıvı Aminoasit",
+    "en": "Organic Carbon and Liquid Amino Acid"
+   },
+   {
+    "tr": "PK Gübre Çözeltisi",
+    "en": "PK Fertiliser Solution"
+   },
+   {
+    "tr": "Potasyum Çözeltisi",
+    "en": "Potassium Solution"
+   },
+   {
+    "tr": "Sistemik Sıvı Bakır",
+    "en": "Systemic Liquid Copper"
+   },
+   {
+    "tr": "Sıvı Deniz Yosunu",
+    "en": "Liquid Seaweed"
+   },
+   {
+    "tr": "Sıvı Sitokinin",
+    "en": "Liquid Cytokinin"
+   },
+   {
+    "tr": "Yavaş Salınımlı Sıvı Azot",
+    "en": "Slow Release Liquid Nitrogen"
+   },
+   {
+    "tr": "Çinko Sülfat İçerikli Gübre Çözeltisi",
+    "en": "Fertiliser Solution Containing Zinc Sulphate"
+   },
+   {
+    "tr": "Çinkolu Gübre Çözeltisi",
+    "en": "Zinc Fertiliser Solution"
+   }
+  ]
+ },
+ "products": [
+  {
+   "slug": "epsilon",
+   "tagline_en": "Want to take the stress off your crop?",
+   "description_en": "Epsilon helps plants become more resilient to a range of stress factors. It increases their tolerance of environmental stresses such as drought, salinity and extreme heat. It raises the chlorophyll content of the foliage. It supports the plant's synthesis of vitamins and enzymes."
+  },
+  {
+   "slug": "citofol",
+   "tagline_en": "Want to speed up cell division?",
+   "description_en": "Thanks to the organic matter, L-form amino acids and magnesium it contains, it accelerates cell division."
+  },
+  {
+   "slug": "bix",
+   "tagline_en": "Want to accelerate your crop's growth?",
+   "description_en": "Thanks to the alginic acids obtained from seaweed, which can be applied to the root zone, it is translocated within the plant very rapidly. It enables the plant to grow healthily in the shortest possible time. It promotes rooting and improves nutrient uptake from the soil. It increases the water-holding capacity of the soil. Under adverse conditions such as salinity, over-irrigation and a high water table, it helps the plant return to health."
+  },
+  {
+   "slug": "florentia",
+   "tagline_en": "Seeing phosphorus deficiency in your crop?",
+   "description_en": "Florentia is produced by combining different phosphorus sources in order to meet the phosphorus requirements of plants. With its rapidly and easily absorbed form, Florentia is highly effective."
+  },
+  {
+   "slug": "mielca",
+   "tagline_en": "If calcium is in short supply",
+   "description_en": "Specially selected calcium and boron sources are used in the production of Mielca. Its calcium particles are therefore small and readily taken up. Because its pH is low, uptake is very rapid in both soil and foliar applications. It strengthens the cell wall and increases the plant's resistance."
+  },
+  {
+   "slug": "potatro",
+   "tagline_en": "Short of potassium?",
+   "description_en": "During the production of Potatro the potassium particles are reduced in size, so potassium — one of the most difficult elements to take up and translocate — is better chelated, absorbed more quickly and translocated more readily within the plant. For crops that need potassium, Potatro is the best product for correcting a potassium deficiency."
+  },
+  {
+   "slug": "statera",
+   "tagline_en": "Looking for balanced growth?",
+   "description_en": "Statera is produced with special additives so that it delivers balanced, rapid growth in plants. It is taken up in full and remains effective even under unfavourable weather and soil conditions. With the trace elements it contains, Statera supports the plant's synthesis of vitamins."
+  },
+  {
+   "slug": "rotynix",
+   "tagline_en": "Having trouble with rooting?",
+   "description_en": "Thanks to its special zinc content, it stimulates the growth points of the plant's roots and speeds up rooting. It encourages the formation of fine feeder roots."
+  },
+  {
+   "slug": "folnix",
+   "tagline_en": "Having trouble with flowering?",
+   "description_en": "Thanks to its special additives and its special zinc content, it stimulates the plant's growth points and promotes the formation of flower buds. It increases the amount of pollen in the flowers already present and assists fertilisation."
+  },
+  {
+   "slug": "trionic",
+   "tagline_en": "Is your crop short of nitrogen?",
+   "description_en": "Containing four forms of nitrogen, Trionic meets the plant's entire nitrogen requirement. Its non-volatile, leach-resistant nitrogen form satisfies that requirement both quickly and over a long period. It does not cause the tissues to soften, and it supports fruit growth. The carbon content of its specially processed nitrogen is ten times higher than that of other nitrogen sources."
+  },
+  {
+   "slug": "exom",
+   "tagline_en": "Are the elements that have built up in your soil not being taken up?",
+   "description_en": "Its high organic matter content improves soil quality. It accelerates the activity of micro-organisms in the soil. It enables the elements that have accumulated in the soil and cause salinity to be chelated organically and carried into the plant."
+  },
+  {
+   "slug": "dipolyo",
+   "tagline_en": "Do you need more than phosphorus alone?",
+   "description_en": "By taking part in protein synthesis, the phosphorus in Dipolyo increases flowering. It helps to activate the vitamins, enzymes and amino acids the plant needs in order to flower. It meets the plant's energy requirement. It gives the leaves a more vivid colour."
+  },
+  {
+   "slug": "avola",
+   "tagline_en": "Is your crop not working?",
+   "description_en": "Thanks to the L-form amino acids it contains, Avola enables the plant to synthesise protein independently of environmental conditions and to keep working without interruption. It protects the plant from the effects of adverse environmental factors. It relieves stress. It contributes to pollen formation. Through protein synthesis it supports fruit growth. It helps to replenish the carbon that has been depleted in soils cropped for many years."
+  },
+  {
+   "slug": "nutriorgan",
+   "tagline_en": "",
+   "description_en": "With its 40% fulvic acid content, NUTRIORGAN is an excellent rooting promoter. It is a product that supports the synthesis of the vitamins and nutrients that cells require. It is a wholly natural plant extract obtained from plants, produced without the use of chemicals or acids. NUTRIORGAN is a natural reservoir of antioxidants, enzymes, amino acids and many other substances. It works actively both in the soil and inside the plant. NUTRIORGAN chelates trace elements and N-P-K. It makes trace elements and N-P-K that are unavailable in the soil available to the plant, and in doing so prevents the salt formation caused by the accumulation of these elements in the soil. By increasing the leaf uptake of foliar-applied trace elements, foliar fertilisers and systemic crop protection products, it improves the effectiveness of the product applied. It raises soil quality by increasing the number of beneficial micro-organisms in the soil. It helps to rejuvenate old, tired soils. It accelerates and increases chlorophyll synthesis."
+  },
+  {
+   "slug": "vitaradico",
+   "tagline_en": "",
+   "description_en": "VITARADICO is an excellent rooting promoter thanks to its high concentration. Its high fulvic acid content means it is perceived by the plant as entirely natural and is taken up rapidly. Because fulvic acids are very effective chelating agents, VITARADICO assists in the uptake and transport of the elements applied alongside it. Fulvic acids are the best carriers of potassium. Since the plant identifies VITARADICO as a natural product, it takes up VITARADICO together with all the elements it has chelated and transports them rapidly to every organ. Trace element and heavy metal accumulation in the soil is therefore avoided. In soils treated with VITARADICO, salinity falls, organic matter increases and the soil is rejuvenated. Thanks to the high level of B vitamins it contains, VITARADICO produces very rapid results in the plant. Plants find it difficult to synthesise vitamins under poor weather and soil conditions. When VITARADICO is applied, no deficiency of these vitamins occurs and the plant continues its natural development. The vitamins it contains increase enzyme activity and thereby accelerate cellular processes such as photosynthesis, protein synthesis and energy production. Humic acids are immobile in the soil and function only within a certain pH range. Fulvic acids, by contrast, both carry elements from the soil into the plant and play an active role in moving elements within the plant; they remain mobile and active across the whole pH range. Thanks to its high fulvic acid content, VITARADICO is actively at work both in the plant and in the soil."
+  },
+  {
+   "slug": "maxivital",
+   "tagline_en": "",
+   "description_en": "MAXIVITAL is an excellent rooting promoter thanks to its high concentration. The free amino acids it contains stimulate the plant's metabolism. It accelerates growth and builds resilience to stress conditions. Because fulvic acids are very effective chelating agents, MAXIVITAL carries the elements applied with it from the soil into the plant; they are transported to all of the plant's organs at once and very rapidly. MAXIVITAL is the best carrier of potassium. It helps reduce the accumulation of trace elements and heavy metals in the soil. In soils where it is used, salinity falls, organic matter increases and the soil is rejuvenated. Plants find it difficult to synthesise vitamins under poor weather and soil conditions. When MAXIVITAL is applied, no deficiency of these vitamins occurs and the plant continues its natural development. The vitamins it contains increase enzyme activity and thereby accelerate cellular processes such as photosynthesis, protein synthesis and energy production. MAXIVITAL works across the whole pH range and delivers results in any type of soil."
+  },
+  {
+   "slug": "nator",
+   "tagline_en": "",
+   "description_en": "NATOR is an excellent rooting promoter thanks to its high concentration. The free amino acids it contains stimulate the plant's metabolism. It accelerates growth and builds resilience to stress conditions. Because fulvic acids are very effective chelating agents, NATOR carries the elements applied with it from the soil into the plant; they are transported to all of the plant's organs at once and very rapidly. NATOR is the best carrier of potassium. It helps reduce the accumulation of trace elements and heavy metals in the soil. In soils where it is used, salinity falls, organic matter increases and the soil is rejuvenated. Plants find it difficult to synthesise vitamins under poor weather and soil conditions. When NATOR is applied, no deficiency of these vitamins occurs and the plant continues its natural development. The vitamins it contains increase enzyme activity and thereby accelerate cellular processes such as photosynthesis, protein synthesis and energy production. NATOR works across the whole pH range and delivers results in any type of soil."
+  },
+  {
+   "slug": "fixel",
+   "tagline_en": "",
+   "description_en": "FIXEL is an organic product made up of amino acids of plant origin, enzymes and a high proportion of organic matter. Its formulation contains plant-based amino acids only, so its uptake and its activity within the plant are very rapid. It is taken up and used by the plant whatever the climatic conditions. It increases photosynthesis and therefore the amount of nutrients the plant produces. Thanks to the enzymes it contains, FIXEL takes part in all of the plant's vital processes and increases protein synthesis. It promotes faster fruit growth and earlier harvesting. By keeping the plant young and healthy throughout the season, it prevents the disorders brought on by stress conditions. Organic carbon in the soil falls by 50% with every cultivation. As the years pass the organic carbon level declines and the soil loses its fertility. Applying FIXEL allows the soil to be enriched with organic carbon."
+  },
+  {
+   "slug": "energetico",
+   "tagline_en": "",
+   "description_en": "ENERGETICO is an organic product made up of amino acids of plant origin, enzymes and a high proportion of organic matter. Its formulation contains plant-based amino acids only, so its uptake and its activity within the plant are very rapid. It is taken up and used by the plant whatever the climatic conditions. It increases photosynthesis and therefore the amount of nutrients the plant produces. Thanks to the enzymes it contains, ENERGETICO takes part in all of the plant's vital processes and increases protein synthesis. It promotes faster fruit growth and earlier harvesting. By keeping the plant young and healthy throughout the season, it prevents the disorders brought on by stress conditions. Organic carbon in the soil falls by 50% with every cultivation. As the years pass the organic carbon level declines and the soil loses its fertility. Applying ENERGETICO allows the soil to be enriched with organic carbon."
+  },
+  {
+   "slug": "marlon-10",
+   "tagline_en": "",
+   "description_en": "MARLON is a plant-based product composed of L-form plant amino acids obtained by enzymatic hydrolysis, together with enzymes and a high level of organic matter. (It contains no inactive D-form amino acids.) The amino acids in MARLON are: L-Alanine, L-Arginine, L-Aspartic Acid, L-Glutamic Acid, L-Glycine, L-Histidine, L-Leucine, L-Isoleucine, L-Lysine, L-Methionine, L-Phenylalanine, L-Proline, L-Tyrosine and L-Valine. MARLON makes a major contribution to the regulation of plant growth. It increases photosynthesis and so raises nutrient production. It plays a leading role in fertilisation and fruit formation. During fertilisation and fruit set the plant needs large quantities of amino acids. If the plant is under stress during this period, or if sufficient amino acids are not supplied, fertilisation does not take place. With its high amino acid content, MARLON meets the plant's requirements. MARLON chelates trace elements and allows them to pass easily into the plant. It helps the plant nutrients and systemic crop protection products applied with it to enter the plant readily and work more effectively. It encourages the stomata to open. It increases the plant's resilience, helping it withstand poor weather and environmental conditions. Amino acids form part of the structure of hormones and enzymes; thanks to the amino acids it contains, MARLON increases enzyme and hormone activity."
+  },
+  {
+   "slug": "sinestre",
+   "tagline_en": "",
+   "description_en": "Thanks to its special formulation, Sinestre accelerates whichever process the plant is engaged in at its current stage of development (plant growth, flowering, rooting and so on). Its effects include cell division and expansion, higher yields, fruit enlargement and overall plant development. It shortens the vegetative growth period. It relieves stress and helps the plant adapt to environmental conditions."
+  },
+  {
+   "slug": "especta",
+   "tagline_en": "",
+   "description_en": "Thanks to the alginic acids and organic matter it contains, Especta accelerates vegetative growth and deepens the plant's colour. It speeds up photosynthesis. Applied through drip irrigation, it increases the number of micro-organisms in the soil. It conditions the soil. Especta is the choice of those who want fast results."
+  },
+  {
+   "slug": "excito-gg",
+   "description_en": "Used to wake the plant up and to get it moving again during periods of stagnation. Thanks to the amino acids it contains, it prevents plant growth from slowing down or coming to a halt.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "braxin",
+   "description_en": "Accelerates generative and vegetative growth in the plant and increases flowering. It can be applied at any stage of the plant's development.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "salifol",
+   "description_en": "Thanks to the zinc it contains, Salifol accelerates and increases flowering. The plant's resilience improves. It can be applied at any stage.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "radiactive",
+   "description_en": "RADIACTIVE prevents the root stress that develops under the difficult conditions of hot and cold periods, and encourages root development. In newly planted crops it guarantees the formation of fine (feeder) roots. It shortens the time the plant needs to overcome transplanting stress. In propagation from cuttings, RADIACTIVE produces root formation very quickly. RADIACTIVE promotes roots that are more resistant to root diseases and pests. It contains amino acids, polysaccharides and natural rooting adjuvants.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "nat-k",
+   "description_en": "Thanks to its special formulation, Nat-K accelerates cell division in vegetables and fruit, giving uniform fruit growth and earlier harvests. It speeds up the conversion of the fruit's colour pigments, so colouring develops faster and a good, even colour is achieved. It increases the sugar content of the fruit and extends its shelf life. Nat-K supports enzyme activity and photosynthesis, assists the transport of plant nutrients and photosynthates, and increases protein content.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "auxi-c",
+   "description_en": "Promotes development and stem elongation in plants. It is effective in cell division and cell enlargement. It helps the plant orientate itself towards the sun. It plays a part in the opening of the stomata. It prevents the drop of leaves, fertilised flowers and fruit. It plays a role in fruit formation. It can be applied to the soil or as a foliar spray.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "cyto-a",
+   "description_en": "Produces branches and shoots and promotes bud development. By encouraging lateral branching, it balances uncontrolled elongation. It organises the distribution of nutrients within the plant. It has a senescence-delaying effect, keeping the plant young throughout. It can be applied to the soil or as a foliar spray.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "tensotec",
+   "description_en": "For use in foliar applications. It adjusts the pH of the water, raising it when too low and lowering it when too high. By extending the half-life of crop protection products, it prevents them from losing their effectiveness during application. It is a specialised activator that allows the crop protection products and fertilisers applied alongside it to be used effectively. It also acts as a spreader-sticker, ensuring that the product and the fertiliser are taken up rapidly by the plant without being washed off.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "aztec",
+   "description_en": "For use in soil applications. It adjusts the pH of the water, raising it when too low and lowering it when too high. It is a specialised activator that allows the crop protection products and fertilisers applied alongside it to be used effectively in the soil, without being leached away or broken down.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "rapido-n32",
+   "description_en": "RAPIDO N32 contains three forms of nitrogen. Nitrate nitrogen accelerates vegetative growth, while ammoniacal and urea nitrogen provide gradual development through their slow release. Thanks to its high nitrogen content, it corrects the disorders caused by nitrogen deficiency. It prevents the leaves from yellowing and gives them a strong, deep colour. When RAPIDO N32 is used together with herbicides, it increases their effectiveness.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "actical-40",
+   "description_en": "Contains calcium formate, a new source of calcium used in agriculture both in Türkiye and around the world. With its 60% carboxylic acid content, it can be mixed with both fertilisers and crop protection products. It chelates the calcium and other elements in the soil and makes them available for uptake. It prevents soil salinisation. It firms up plant tissue and thereby increases the plant's resilience. It can also be applied through drip irrigation.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "arvento",
+   "description_en": "Arvento relieves soil salinity through the organic acids it contains. Saline soil is a sign that plant nutrients have become locked up in the soil. Applying Arvento allows these elements to dissolve and become available to the plant. Many of the world's nematodes occur in saline water and saline soils, where they multiply rapidly. Applying Arvento removes soil salinity, and when used together with nematode control products it makes those products more effective.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "polical-ultra",
+   "description_en": "Alongside acid groups such as benzoic, acetic, butyric, citric, malic and carboxylic acid, POLICAL also contains L-type amino acids, making it the calcium source with the highest uptake and availability. It is taken up by the plant regardless of weather conditions. The amino acids it contains encourage the stomata to open, and this is how it is transported within the plant. By increasing pectate formation in the cell wall, POLICAL strengthens the plant, making it more resistant to disease. It extends the shelf life of the fruit and reduces ethylene formation. It also supports increased enzyme activity. Calcium deficiency is accompanied by deficiencies of Zn, Fe, boron and Mn; where POLICAL is applied, it ensures that these elements are taken up as quickly as possible.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "transchel-fe",
+   "description_en": "TRANSCHEL Fe dissolves perfectly even in the most difficult soil conditions and is taken up by the plant extremely quickly. With its high concentration of high-quality 4.8% ortho-ortho Fe isomer, it is an iron preparation that remains fully effective in alkaline and heavily calcareous soils. It is used in the synthesis of chlorophyll, the pigment responsible for photosynthesis, accelerating that synthesis and delivering more efficient photosynthesis. With its high-quality raw material and high availability, TRANSCHEL Fe readily provides a solution even for severe chlorosis problems. It accelerates biological nitrogen fixation and encourages vegetative growth. It gives the plant a healthy dark green colour and increases leaf thickness. It promotes nutrient uptake, increases protein synthesis and leads to higher yields. It prevents flower and fruit drop, and its use results in more colourful, brighter fruit and flower formation.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "alexol",
+   "description_en": "ALEXOL is a systemic product containing a high level of phosphorus and potassium. The phosphorus it contains is in the form of phosphite ions obtained from phosphorous acid, which makes it far more effective than phosphorus products obtained from phosphoric acid. ALEXOL increases phytoalexin production and thereby supports the plant’s own natural resilience. It is a very good source of plant nutrition. When applied to plants that are running to excessive height, it turns them towards cropping and slows their elongation. It can be applied both to the foliage and to the roots. It is taken up very quickly and moves in both directions within the plant. ALEXOL increases stem diameter and thickens flower stalks. It is beneficial during flowering.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "phylon-coper",
+   "description_en": "It contains organic acids, thanks to which it is taken up very quickly through both the foliage and the roots. PHYLON COPER triggers the plant's defence mechanism and moves in both directions within the plant. It is particularly effective in regulating permeability in the xylem. Thanks to the elements it contains, it plays a role in photosynthesis.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "foralex",
+   "description_en": "FORALEX is a phosphorous acid produced with advanced technology. By stimulating phytoalexin production it supports the plant’s own natural resilience. It can be applied through the roots and through the foliage. FORALEX strengthens plant tissue. It is an important source of phosphorus and potassium for plants.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "momento-k30",
+   "description_en": "MOMENTO K30 is a highly concentrated source of potassium that is taken up very quickly by the plant and transferred directly to the fruit. As well as being an enzymatic activator required for photosynthesis, it also promotes carbohydrate and protein synthesis. It increases flower stalk strength, fruit set and shelf life. It enlarges the fruit, improves internal filling and brings the harvest forward. MOMENTO K30 increases the synthesis of colour pigments in fruit that has reached maturity, giving the fruit a deep, bright colour. It raises the Brix value of the fruit and thereby helps to deliver a high level of taste and aroma.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "inventa-0-20-20",
+   "description_en": "With its special chemical structure, INVENTA is an excellent source of phosphorus (P) and potassium (K), and it is taken up and used by the plant very quickly even at low temperatures. It controls excessive elongation and the opening of internodes during hot periods, so producing balanced growth. The special phosphorus structure in INVENTA increases the vigour of plants and strengthens the root system, while the special potassium structure it contains raises protein and carbohydrate metabolism, increasing yield and building resistance to disease. By activating colour pigments it eases the colour change in fruit. Together with fruit set, it increases cell division and delivers large, high-calibre fruit. It reduces fruit acidity and increases Brix and aroma content. It evens out fruit colour, accelerates ripening and brings the harvest forward.",
+   "tagline_en": ""
+  },
+  {
+   "slug": "florise-p55",
+   "description_en": "A very large proportion of the phosphorus in the soil is present in a form that plants cannot use. In calcareous soils and soils with a high pH, plants are unable to benefit from phosphorus. Thanks to its low pH, FLORISE P55 is taken up very quickly in all soil conditions. Because it is a phosphorus source obtained from rock phosphate, it provides the plant with phosphorus it can use at all times. With its high phosphorus content it meets the plant's entire phosphorus requirement. It increases ATP synthesis and so raises energy production in the plant. FLORISE P55 is a very good flowering promoter. It is used to correct the purple, red and reddish colouring that forms on the fruit and stems of plants as a result of phosphorus deficiency.",
+   "tagline_en": ""
+  }
+ ]
+}
