@@ -50,7 +50,8 @@ export default function VideoHero({ src, poster, children, aside, className = ''
       (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData === true,
   )
   const [small] = useState(() => window.matchMedia('(max-width: 640px)').matches)
-  const [paused, setPaused] = useState(quiet)
+  const [paused, setPaused] = useState(quiet)      // what the user asked for
+  const [rolling, setRolling] = useState(false)    // what the element is doing
   const [inView, setInView] = useState(true)
   const [failed, setFailed] = useState(false)
 
@@ -76,6 +77,19 @@ export default function VideoHero({ src, poster, children, aside, className = ''
       })
     }
   }, [paused, inView, failed])
+
+  // The control reports the element's real state, not the intent: a browser
+  // can pause the film on its own (low-power mode, a backgrounded tab), and
+  // the label must not keep saying "pause" over a stopped film.
+  const toggle = () => {
+    const el = video.current
+    if (el && el.paused) {
+      setPaused(false)
+      el.play().catch(() => {})
+    } else {
+      setPaused(true)
+    }
+  }
 
   useEffect(() => {
     const el = root.current
@@ -127,6 +141,9 @@ export default function VideoHero({ src, poster, children, aside, className = ''
           aria-hidden="true"
           tabIndex={-1}
           onError={() => setFailed(true)}
+          onPlaying={() => setRolling(true)}
+          onPause={() => setRolling(false)}
+          onEnded={() => setRolling(false)}
         >
           {!small && <source src={`${base}${src}-1080.webm`} type="video/webm" />}
           {/* With <source> children the element itself never gets 'error' when
@@ -160,12 +177,12 @@ export default function VideoHero({ src, poster, children, aside, className = ''
             {!failed && (
               <button
                 type="button"
-                onClick={() => setPaused((p) => !p)}
+                onClick={toggle}
                 className="glass inline-flex items-center gap-2 rounded-full px-3.5 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.12em] transition-opacity hover:opacity-80"
                 style={{ color: 'var(--fg)' }}
               >
-                {paused ? <PlayIcon /> : <PauseIcon />}
-                {paused ? t.products.videoPlay : t.products.videoPause}
+                {rolling ? <PauseIcon /> : <PlayIcon />}
+                {rolling ? t.products.videoPause : t.products.videoPlay}
               </button>
             )}
           </div>

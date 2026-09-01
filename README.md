@@ -111,7 +111,9 @@ sessiz döngü olarak oynar. Hazırlık:
   720p (0,9 MB), poster WebP (36 KB). Poster döngünün ilk karesi, böylece
   posterden filme geçiş görünmez.
 - **Erişilebilirlik.** Film beş saniyeden uzun hareket olduğu için her zaman bir
-  durdur/oynat düğmesi var (WCAG 2.2.2). `prefers-reduced-motion` veya veri
+  durdur/oynat düğmesi var (WCAG 2.2.2); düğme kullanıcının niyetini değil,
+  öğenin gerçek durumunu gösterir — tarayıcı filmi kendi başına durdurursa
+  (düşük güç modu, arka plana alınan sekme) etiket buna uyar. `prefers-reduced-motion` veya veri
   tasarrufu isteyen tarayıcılar filmi indirmez, posteri ve oynat düğmesini
   görür. Film ekrandan çıkınca duraklar.
 - **Okunabilirlik.** Metin filmin üstünde durduğu için kontrast kareye göre
