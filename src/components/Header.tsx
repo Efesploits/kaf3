@@ -79,7 +79,10 @@ export default function Header() {
       </a>
 
       <header
-        className="fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500"
+        className="site-header fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500"
+        // While the sheet is open the header must match the sheet, not the
+        // film it is covering; the hero override in index.css keys off this.
+        data-menu-open={open ? '' : undefined}
         style={{
           background: scrolled || open ? 'color-mix(in oklab, var(--bg) 86%, transparent)' : 'transparent',
           backdropFilter: scrolled || open ? 'saturate(180%) blur(14px)' : 'none',
@@ -98,7 +101,7 @@ export default function Header() {
                 to={l.to}
                 end={l.end}
                 className={({ isActive }) =>
-                  `relative rounded-full px-4 py-2 text-[0.9rem] font-medium transition-colors duration-300 ${
+                  `relative rounded-full px-4 py-2 text-[0.9rem] font-medium transition-colors duration-500 ${
                     isActive ? '' : 'hover:opacity-70'
                   }`
                 }
@@ -116,18 +119,18 @@ export default function Header() {
             <button
               type="button"
               onClick={toggleLang}
-              className="rounded-full px-3 py-2 text-[0.78rem] font-semibold uppercase tracking-[0.1em] transition-colors hover:opacity-70"
+              className="rounded-full px-3 py-2 text-[0.78rem] font-semibold uppercase tracking-[0.1em] transition-colors duration-500 hover:opacity-70"
               style={{ color: 'var(--fg-muted)' }}
               aria-label={t.common.langSwitch}
             >
-              <span style={{ color: 'var(--fg)' }}>{lang.toUpperCase()}</span>
+              <span className="transition-colors duration-500" style={{ color: 'var(--fg)' }}>{lang.toUpperCase()}</span>
               <span aria-hidden="true" className="opacity-40"> / {lang === 'tr' ? 'EN' : 'TR'}</span>
             </button>
 
             <button
               type="button"
               onClick={toggleTheme}
-              className="grid size-9 place-items-center rounded-full transition-colors hover:opacity-70"
+              className="grid size-9 place-items-center rounded-full transition-colors duration-500 hover:opacity-70"
               style={{ color: 'var(--fg-muted)' }}
               aria-label={theme === 'dark' ? t.common.theme.toLight : t.common.theme.toDark}
             >
@@ -142,7 +145,7 @@ export default function Header() {
               ref={toggle}
               type="button"
               onClick={() => setOpen((v) => !v)}
-              className="grid size-9 place-items-center rounded-full lg:hidden"
+              className="grid size-9 place-items-center rounded-full transition-colors duration-500 lg:hidden"
               style={{ color: 'var(--fg)' }}
               aria-expanded={open}
               aria-controls="mobile-menu"

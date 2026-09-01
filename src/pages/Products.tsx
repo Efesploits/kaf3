@@ -1,8 +1,9 @@
 import { useMemo, useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
-import { useI18n } from '../i18n'
+import { Link, useSearchParams } from 'react-router-dom'
+import { fill, useI18n } from '../i18n'
 import {
   CATEGORY_ORDER,
+  bySlug,
   pick,
   products,
   type CategoryId,
@@ -10,9 +11,21 @@ import {
 } from '../data/products'
 import ProductCard from '../components/ProductCard'
 import Reveal from '../components/Reveal'
+import VideoHero from '../components/VideoHero'
 
 type SeriesFilter = Series | 'all'
 type CatFilter = CategoryId | 'all'
+
+/** The product the film was shot around. */
+const FILM_PRODUCT = 'epsilon'
+
+function Arrow() {
+  return (
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M5 12h13M12.5 6l6 6-6 6" />
+    </svg>
+  )
+}
 
 function Chip({
   active,
@@ -44,6 +57,10 @@ function Chip({
     </button>
   )
 }
+
+const rise = (delay: number) => ({
+  animation: `kaf-fade-up .9s var(--ease-out-quint) ${delay}s both`,
+})
 
 export default function Products() {
   const { t, lang } = useI18n()
@@ -88,22 +105,88 @@ export default function Products() {
   }, [series])
 
   const dirty = series !== 'all' || cat !== 'all' || q !== ''
+  const filmProduct = bySlug.get(FILM_PRODUCT)
+  const seriesCount = new Set(products.map((p) => p.series)).size
+
+  const stats: [number, string][] = [
+    [products.length, t.products.statProducts],
+    [CATEGORY_ORDER.length, t.products.statGroups],
+    [seriesCount, t.products.statSeries],
+  ]
 
   return (
     <>
-      <section className="shell pb-10 pt-[calc(68px+4rem)] md:pt-[calc(76px+6rem)]">
-        <Reveal as="p" className="eyebrow">
-          {t.products.eyebrow}
-        </Reveal>
-        <Reveal as="h1" delay={60} className="mt-5 font-display text-[clamp(2.2rem,6vw,4rem)] font-extrabold leading-[1.02] tracking-[-0.03em]">
-          {t.products.title}
-        </Reveal>
-        <Reveal as="p" delay={110} className="mt-5 max-w-2xl leading-relaxed" style={{ color: 'var(--fg-muted)' }}>
-          {t.products.lead}
-        </Reveal>
-      </section>
+      <VideoHero
+        src="hero"
+        poster={`${import.meta.env.BASE_URL}media/hero-poster.webp`}
+        aside={
+          filmProduct && (
+            <Link
+              to={`/urunler/${filmProduct.slug}`}
+              className="glass inline-flex items-center gap-2.5 rounded-full py-1.5 pl-1.5 pr-3.5 text-[0.78rem] font-medium transition-opacity hover:opacity-85"
+              style={{ color: 'var(--fg)' }}
+            >
+              <span
+                aria-hidden="true"
+                className="grid size-7 place-items-center rounded-full text-[0.6rem] font-bold uppercase tracking-[0.08em]"
+                style={{ background: 'var(--badge-bg)', color: 'var(--badge-fg)' }}
+              >
+                {filmProduct.series === 'promark' ? 'P' : 'K'}
+              </span>
+              <span className="text-[0.66rem] font-semibold uppercase tracking-[0.12em]" style={{ color: 'var(--fg-faint)' }}>
+                {t.products.videoProduct}
+              </span>
+              <span className="font-display font-bold tracking-tight">{filmProduct.name}</span>
+              <Arrow />
+            </Link>
+          )
+        }
+      >
+        <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-7">
+            <p className="eyebrow glass rounded-full px-3.5 py-1.5" style={rise(0.15)}>
+              {t.products.eyebrow}
+            </p>
+            {/* Sized to stop short of the bottle on every width from lg up;
+                the film's subject stays clear of the headline. */}
+            <h1
+              className="mt-5 max-w-[12ch] font-display text-[clamp(2.4rem,5vw,4.1rem)] font-extrabold leading-[0.98] tracking-[-0.035em]"
+              style={rise(0.3)}
+            >
+              {fill(t.products.title, { n: products.length })}
+            </h1>
+          </div>
 
-      <section className="filter-rail border-y py-4">
+          <div className="glass rounded-2xl p-5 md:p-6 lg:col-span-5" style={rise(0.5)}>
+            <p className="max-w-xl text-[0.98rem] leading-relaxed md:text-[1.02rem]">
+              {t.products.lead}
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href="#katalog" className="btn">
+                {t.products.heroCta} <Arrow />
+              </a>
+              <Link to="/iletisim" className="btn btn-ghost">
+                {t.products.heroQuote}
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <dl className="mt-10 flex flex-wrap gap-x-10 gap-y-4 border-t pt-6 md:mt-12" style={rise(0.85)}>
+          {stats.map(([n, label]) => (
+            <div key={label} className="flex flex-row-reverse items-baseline gap-2">
+              <dt className="text-[0.74rem] font-semibold uppercase tracking-[0.14em]" style={{ color: 'var(--fg-faint)' }}>
+                {label}
+              </dt>
+              <dd className="tabular font-display text-[1.7rem] font-extrabold leading-none tracking-tight">
+                {n}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </VideoHero>
+
+      <section id="katalog" className="filter-rail border-y py-4">
         <div className="shell flex flex-col gap-3">
           <div className="flex flex-wrap items-center gap-2">
             <span className="mr-1 text-[0.72rem] font-semibold uppercase tracking-[0.14em]" style={{ color: 'var(--fg-faint)' }}>

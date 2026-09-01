@@ -26,6 +26,11 @@ interface Ctx {
 
 const I18nContext = createContext<Ctx | null>(null)
 
+/** Fill `{name}` slots in a dictionary string: fill(t.products.title, { n: 42 }). */
+export function fill(text: string, vars: Record<string, string | number>): string {
+  return text.replace(/\{(\w+)\}/g, (m, k: string) => (k in vars ? String(vars[k]) : m))
+}
+
 /** First visit follows the browser/system language, then the choice sticks. */
 function initialLang(): Lang {
   try {

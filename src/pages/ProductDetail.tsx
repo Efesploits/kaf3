@@ -54,31 +54,39 @@ export default function ProductDetail() {
         <div className="mt-10 grid gap-12 lg:grid-cols-12 lg:gap-16">
           {/* visual */}
           <div className="lg:col-span-5">
-            <Reveal
-              className="flex aspect-square items-center justify-center overflow-hidden rounded-3xl border p-10"
-              style={{ background: 'var(--bg-soft)' }}
-            >
+            {/* Same studio as the catalogue film and the cards: the packshot
+                stands on the floor line with its reflection under it. */}
+            <Reveal className="studio on-studio aspect-square rounded-3xl border">
               {gallery.length ? (
-                <img
-                  key={gallery[active]}
-                  src={shot(gallery[active])}
-                  alt={product.name}
-                  className="h-full w-auto max-w-full object-contain"
-                  style={{ animation: 'kaf-fade-up .5s var(--ease-out-quint) both' }}
-                />
+                <div className="absolute inset-x-0 top-[9%] flex h-[64%] justify-center">
+                  <div
+                    key={gallery[active]}
+                    className="relative h-full"
+                    style={{ animation: 'kaf-fade-up .5s var(--ease-out-quint) both' }}
+                  >
+                    <img
+                      src={shot(gallery[active])}
+                      alt={product.name}
+                      className="h-full w-auto object-contain"
+                    />
+                    <img
+                      src={shot(gallery[active])}
+                      alt=""
+                      aria-hidden="true"
+                      className="studio-reflection w-auto object-contain"
+                    />
+                  </div>
+                </div>
               ) : (
-                <div className="relative grid h-full w-full place-items-center text-center">
+                <div className="absolute inset-0 grid place-items-center text-center">
                   <img
                     src={`${import.meta.env.BASE_URL}brand/kaf-emblem.svg`}
                     alt=""
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-0 m-auto w-[68%] opacity-[0.07]"
+                    className="pointer-events-none absolute inset-0 m-auto w-[68%] opacity-[0.12]"
                   />
                   <div className="relative">
-                    <span
-                      className="font-display text-[clamp(1.8rem,6vw,3rem)] font-extrabold leading-none tracking-tight"
-                      style={{ color: 'var(--fg)' }}
-                    >
+                    <span className="font-display text-[clamp(1.8rem,6vw,3rem)] font-extrabold leading-none tracking-tight">
                       {product.name}
                     </span>
                     {product.catalogPage && (

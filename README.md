@@ -96,6 +96,38 @@ ayrıca tespit edilip saydamlaştırıldı. Silüetteki yumuşak geçiş
 `a = d / d_iç` ile geri kazanıldı, yani render'ın kendi kenar yumuşatması
 korundu — hiçbir piksel sertçe kesilmedi.
 
+### Katalog filmi
+
+Ürünler sayfasının açılışındaki film (`public/media/`) firmanın sağladığı, EPSILON
+şişesi etrafında üretilmiş 8 saniyelik bir 4K render'dır. Sitede ses yok, film
+sessiz döngü olarak oynar. Hazırlık:
+
+- **Dikişsiz döngü.** Son 0,75 saniye ilk 0,75 saniyenin üzerine çözülerek
+  bindirildi (`xfade`), döngü 7,25 saniyeye indi. Ölçüm: döngünün ilk ve son
+  karesi arasındaki ortalama fark 2/255 (codec gürültüsü seviyesi), aynı
+  karenin 5. saniyedeki kareyle farkı 27/255.
+- **Sürümler.** H.264 1080p (2,1 MB), VP9 Profile 0 1080p (1,2 MB; Profile 1 /
+  4:4:4 çoğu donanım çözücüde oynamıyor, bilerek 4:2:0), telefonlar için H.264
+  720p (0,9 MB), poster WebP (36 KB). Poster döngünün ilk karesi, böylece
+  posterden filme geçiş görünmez.
+- **Erişilebilirlik.** Film beş saniyeden uzun hareket olduğu için her zaman bir
+  durdur/oynat düğmesi var (WCAG 2.2.2). `prefers-reduced-motion` veya veri
+  tasarrufu isteyen tarayıcılar filmi indirmez, posteri ve oynat düğmesini
+  görür. Film ekrandan çıkınca duraklar.
+- **Okunabilirlik.** Metin filmin üstünde durduğu için kontrast kareye göre
+  değişir. Bu yüzden karartma (scrim) ve buzlu paneller, döngünün 174 karesinin
+  tamamı üzerinde her metin bölgesinin *en parlak* pikseline karşı ölçüldü
+  (`scratchpad/video/contrast.py`): masaüstünde başlık 5,0:1, panel 6,3:1,
+  gezinme 5,8:1; telefonda başlık 6,6:1, panel 14:1 — en kötü karede. Başlık
+  masaüstünde şişeye değmeyecek şekilde boyutlandırıldı (yazı sağ kenarı
+  şişenin sol kenarından 62 px önce biter), açıklama ve düğmeler buzlu bir
+  panelde, üst etiket bir kapsülde durur; böylece filmin ortası — şişe, kapak,
+  buğu — karartılmadan kalır.
+- **Renk.** Filmin yeşil siklorama paleti `--studio-*` token'larına örneklendi;
+  ürün kartlarındaki ve ürün sayfasındaki görsel kuyuları aynı stüdyoda durur:
+  aynı fon, aynı ışık huzmesi, zeminde yansıma. Tema değişse de bu paletler
+  değişmez — bir filmin kendi renk şeması vardır.
+
 ### Ürün metinlerinde yapılan düzenlemeler
 
 Ürün açıklamaları firmanın kendi kataloğundan ve etiketlerinden alındı. İki tür

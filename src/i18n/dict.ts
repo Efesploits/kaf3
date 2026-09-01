@@ -153,10 +153,18 @@ export const tr = {
   },
 
   products: {
-    eyebrow: 'Ürünler',
-    title: 'Ürün kataloğu',
+    eyebrow: 'Ürün kataloğu',
+    title: 'Yapraktan köke, {n} ürün.',
     lead:
-      'Kataloglarımızda yer alan bitki besleme ürünleri. Ürünler bu siteden satılmaz; fiyat ve stok için bizimle iletişime geçin.',
+      'Yaprak gübreleri, damla sulama gübreleri, organik girdiler ve biyostimülantlar — Promark serisi ile KAF katalog serisi tek listede. Ürünler bu siteden satılmaz; fiyat ve stok için bizimle iletişime geçin.',
+    heroCta: 'Kataloğa göz at',
+    heroQuote: 'Teklif iste',
+    statProducts: 'ürün',
+    statGroups: 'ürün grubu',
+    statSeries: 'seri',
+    videoProduct: 'Videodaki ürün',
+    videoPause: 'Videoyu durdur',
+    videoPlay: 'Videoyu oynat',
     filterSeries: 'Seri',
     filterCategory: 'Grup',
     resultsOne: 'ürün',
@@ -418,10 +426,18 @@ export const en: Dict = {
   },
 
   products: {
-    eyebrow: 'Products',
-    title: 'Product catalogue',
+    eyebrow: 'Product catalogue',
+    title: 'Leaf to root, {n} products.',
     lead:
-      'The plant nutrition products listed in our catalogues. Products are not sold through this site — contact us for pricing and availability.',
+      'Foliar fertilisers, fertigation products, organic inputs and biostimulants — the Promark range and the KAF catalogue range in one list. Products are not sold through this site; contact us for pricing and availability.',
+    heroCta: 'Browse the catalogue',
+    heroQuote: 'Request a quote',
+    statProducts: 'products',
+    statGroups: 'product groups',
+    statSeries: 'ranges',
+    videoProduct: 'Product in the video',
+    videoPause: 'Pause video',
+    videoPlay: 'Play video',
     filterSeries: 'Range',
     filterCategory: 'Group',
     resultsOne: 'product',

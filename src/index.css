@@ -66,6 +66,19 @@
   color-scheme: dark;
 }
 
+/* ── Studio palette ──────────────────────────────────────────────────────
+   Sampled from the product film on the catalogue page: a deep green
+   cyclorama, one light ray from the top-left, a glossy floor. These do not
+   change with the theme - a film is its own colour scheme, and the product
+   wells that echo it stay in it on both.                                   */
+:root {
+  --studio-deep: #0a1c15;
+  --studio: #133327;
+  --studio-glow: #2f6b4d;
+  --studio-ray: #dfe6e1;
+  --studio-floor: #8fa093;
+}
+
 @layer base {
   * {
     border-color: var(--line);
@@ -328,6 +341,140 @@
       -webkit-backdrop-filter: saturate(180%) blur(14px);
       backdrop-filter: saturate(180%) blur(14px);
     }
+  }
+
+  /* Dark scheme for anything that sits on the film: the hero copy, the header
+     while it still overlaps the hero, and the product wells. Every existing
+     component reads these tokens (.eyebrow, .btn, .btn-ghost, badges), so it
+     restyles without knowing where it is. */
+  .on-studio,
+  html[data-hero='dark'] .site-header:not([data-menu-open]) {
+    --bg: var(--studio-deep);
+    --bg-soft: rgb(255 255 255 / 0.1);
+    --bg-sunk: rgb(255 255 255 / 0.06);
+    --panel: rgb(255 255 255 / 0.08);
+    --line: rgb(255 255 255 / 0.18);
+    --line-soft: rgb(255 255 255 / 0.1);
+    --fg: #ffffff;
+    --fg-muted: rgb(255 255 255 / 0.74);
+    --fg-faint: rgb(255 255 255 / 0.56);
+    --accent: var(--color-lime-light);
+    --accent-fg: var(--studio-deep);
+    --badge-bg: var(--color-lime-light);
+    --badge-fg: var(--studio-deep);
+    color: var(--fg);
+    color-scheme: dark;
+  }
+
+  /* Full-bleed film hero. The copy is anchored to the bottom-left, which is
+     where the frame is darkest; the light ray in the top-left is the best part
+     of the shot and is left alone. The section itself keeps the page's tokens
+     so the fade at its foot can blend into whatever the page background is. */
+  .video-hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: flex-end;
+    min-height: clamp(34rem, 88svh, 60rem);
+    overflow: hidden;
+    background: var(--studio-deep);
+  }
+  .video-hero > .film,
+  .video-hero > .poster {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+  .video-hero > .poster {
+    z-index: -3;
+  }
+  .video-hero > .film {
+    z-index: -2;
+  }
+  .video-hero::before {
+    /* Legibility scrim. A band for each place copy actually sits: the
+       header row across the top (the header is transparent at scroll 0),
+       the headline block on the left, the lead and buttons on the right,
+       and the floor the copy stands on. The middle - the bottle, the cap
+       lift, the mist - stays clear. */
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      linear-gradient(to bottom, rgb(10 28 21 / 0.66) 0, rgb(10 28 21 / 0.66) 80px, transparent 190px),
+      linear-gradient(to top, rgb(10 28 21 / 0.94) 0%, rgb(10 28 21 / 0.74) 30%, rgb(10 28 21 / 0.4) 55%, transparent 72%),
+      linear-gradient(to right, rgb(10 28 21 / 0.8) 0%, rgb(10 28 21 / 0.45) 28%, transparent 50%),
+      linear-gradient(to left, rgb(10 28 21 / 0.5) 0%, transparent 42%);
+  }
+  @media (max-width: 63.98rem) {
+    /* Stacked layout: the headline runs over the bottle and, mid-loop, over
+       the lifted cap and the mist, so the lower three quarters carry a firm
+       backing (0.7 at the headline band). Only the top eighth keeps the film
+       at full strength. Measured over all 174 frames: worst headline pixel
+       passes 3:1 with margin. */
+    .video-hero::before {
+      background:
+        linear-gradient(to bottom, rgb(10 28 21 / 0.66) 0, rgb(10 28 21 / 0.66) 72px, transparent 170px),
+        linear-gradient(to top, rgb(10 28 21 / 0.94) 0%, rgb(10 28 21 / 0.86) 45%, rgb(10 28 21 / 0.7) 75%, rgb(10 28 21 / 0.35) 88%, transparent 100%);
+    }
+  }
+  .video-hero::after {
+    /* hand over to the page below without a hard edge */
+    content: '';
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 6rem;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, var(--bg));
+  }
+
+  /* Frosted control on the film (pause button, product chip). */
+  .glass {
+    background: rgb(10 28 21 / 0.62);
+    -webkit-backdrop-filter: saturate(160%) blur(12px);
+    backdrop-filter: saturate(160%) blur(12px);
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.16);
+  }
+
+  /* A product well in the same studio as the film: green cyclorama, one light
+     ray, a sheen on the floor. The packshot's reflection is a flipped copy of
+     the image, so the two always line up. */
+  .studio {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(90% 60% at 50% 100%, rgb(143 160 147 / 0.3), transparent 62%),
+      radial-gradient(120% 95% at 22% 0%, var(--studio-glow), var(--studio) 46%, var(--studio-deep) 100%);
+  }
+  .studio::before {
+    content: '';
+    position: absolute;
+    inset: -30% -10% -10% -35%;
+    pointer-events: none;
+    background: linear-gradient(
+      112deg,
+      transparent 40%,
+      rgb(223 230 225 / 0.22) 47%,
+      rgb(223 230 225 / 0.05) 53%,
+      transparent 60%
+    );
+  }
+  .studio-reflection {
+    position: absolute;
+    inset: 100% 0 auto 0;
+    height: 100%;
+    transform: scaleY(-1);
+    opacity: 0.3;
+    filter: blur(1px);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 48%, #000 100%);
+    mask-image: linear-gradient(to bottom, transparent 48%, #000 100%);
+    pointer-events: none;
   }
 
   /* A section watermark: solid in the page gutter, faded away before it

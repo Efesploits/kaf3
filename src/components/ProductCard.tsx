@@ -48,40 +48,51 @@ export default function ProductCard({ product, index = 0 }: Props) {
         }}
       />
 
-      <div
-        className="relative flex h-48 items-center justify-center overflow-hidden px-6 pt-6"
-        style={{ background: 'var(--bg-soft)' }}
-      >
+      {/* The well is the same studio the catalogue film was shot in. The
+          packshot stands on the floor line with its reflection under it; a
+          product without a photo gets a title card on the same backdrop. */}
+      <div className="studio on-studio h-52">
         {img ? (
-          <img
-            src={img}
-            alt=""
-            loading="lazy"
-            decoding="async"
-            className="h-full w-auto max-w-full object-contain transition-transform duration-700 group-hover:-translate-y-1.5 group-hover:scale-[1.04]"
-          />
+          <div className="absolute inset-x-0 top-[1.4rem] flex h-[8.6rem] justify-center">
+            <div className="relative h-full transition-transform duration-700 group-hover:-translate-y-1.5 group-hover:scale-[1.04]">
+              <img
+                src={img}
+                alt=""
+                loading="lazy"
+                decoding="async"
+                className="h-full w-auto object-contain"
+              />
+              <img
+                src={img}
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                className="studio-reflection w-auto object-contain"
+              />
+            </div>
+          </div>
         ) : (
-          <>
+          <div className="absolute inset-0 grid place-items-center">
             <img
               src={`${import.meta.env.BASE_URL}brand/kaf-emblem.svg`}
               alt=""
               aria-hidden="true"
               loading="lazy"
-              className="pointer-events-none absolute inset-0 m-auto h-[74%] opacity-[0.09] transition-transform duration-700 group-hover:scale-105"
+              className="pointer-events-none absolute inset-0 m-auto h-[70%] opacity-[0.14] transition-transform duration-700 group-hover:scale-105"
             />
-            <span
-              className="relative font-display text-[1.7rem] font-extrabold leading-none tracking-tight opacity-45 transition-opacity duration-500 group-hover:opacity-70"
-              style={{ color: 'var(--fg)' }}
-            >
+            <span className="relative font-display text-[1.7rem] font-extrabold leading-none tracking-tight opacity-80 transition-opacity duration-500 group-hover:opacity-100">
               {product.name}
             </span>
-          </>
+          </div>
         )}
         <span
           className="absolute left-4 top-4 rounded-full px-2.5 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.12em]"
           style={{
-            background: product.series === 'promark' ? 'var(--badge-bg)' : 'var(--line)',
-            color: product.series === 'promark' ? 'var(--badge-fg)' : 'var(--fg-muted)',
+            // the KAF pill sits on the brightest corner of the well, so it
+            // gets its own dark backing rather than the translucent line token
+            background: product.series === 'promark' ? 'var(--badge-bg)' : 'rgb(10 28 21 / 0.6)',
+            color: product.series === 'promark' ? 'var(--badge-fg)' : 'var(--fg)',
           }}
         >
           {product.series === 'promark' ? 'Promark' : 'KAF'}
