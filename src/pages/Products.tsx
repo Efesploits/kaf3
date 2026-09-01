@@ -103,13 +103,7 @@ export default function Products() {
         </Reveal>
       </section>
 
-      <section
-        className="sticky top-[68px] z-30 border-y py-4 md:top-[76px]"
-        style={{
-          background: 'color-mix(in oklab, var(--bg) 88%, transparent)',
-          backdropFilter: 'saturate(180%) blur(14px)',
-        }}
-      >
+      <section className="filter-rail border-y py-4">
         <div className="shell flex flex-col gap-3">
           <div className="flex flex-wrap items-center gap-2">
             <span className="mr-1 text-[0.72rem] font-semibold uppercase tracking-[0.14em]" style={{ color: 'var(--fg-faint)' }}>

@@ -74,6 +74,11 @@
   html {
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
+    /* The header is fixed, so anything the browser scrolls into view - a
+       focused control reached by Shift+Tab, an anchor - would otherwise align
+       flush with the top of the viewport and land behind it. 76px is the taller
+       of the two header heights. */
+    scroll-padding-top: 76px;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -286,6 +291,43 @@
 
   .tabular {
     font-variant-numeric: tabular-nums;
+  }
+
+  /* Product filter rail. Its chips wrap, so how much screen it costs depends on
+     the viewport: 355px at 375px wide (five rows), 216px at 640, 169px from 768
+     up. Pinned on a 375x812 phone that is 52% of the screen permanently spent on
+     the filter rather than the grid it filters, which is why it only pins once
+     it has collapsed to its minimum height - at the same 768px where the header
+     grows to 76px.
+
+     The height condition is not redundant with the width one: a phone in
+     landscape is 812px wide but only 375px tall, so the width test alone would
+     pin 246px of chrome over a 375px viewport - worse than the portrait case.
+     Below either limit the rail scrolls away with the page and the header's
+     69px is all that stays.
+
+     Both limits are in rem on purpose. 48rem is Tailwind's own md: breakpoint,
+     which is where the header grows to 76px - written as 768px this rule would
+     stop tracking the header the moment a reader raised their browser's default
+     font size (rem in a media query answers to that, not to html { font-size }),
+     leaving the rail pinned at 76px under a 68px header with a gap between them.
+     37.5rem is 600px at the default size and grows with the type, which is right
+     because the rail's own height is set in rem too.
+
+     The translucent fill and the blur belong to the pinned state alone; static
+     they would only cost a compositing layer for nothing. */
+  .filter-rail {
+    position: static;
+  }
+  @media (min-width: 48rem) and (min-height: 37.5rem) {
+    .filter-rail {
+      position: sticky;
+      top: 76px;
+      z-index: 30;
+      background: color-mix(in oklab, var(--bg) 88%, transparent);
+      -webkit-backdrop-filter: saturate(180%) blur(14px);
+      backdrop-filter: saturate(180%) blur(14px);
+    }
   }
 
   /* A section watermark: solid in the page gutter, faded away before it
